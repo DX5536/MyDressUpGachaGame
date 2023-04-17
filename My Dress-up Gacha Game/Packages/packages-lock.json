@@ -281,6 +281,13 @@
       },
       "hash": "b7ad0a36125fe86b9b545875adeda2b1539f9e92"
     },
+    "jp.setchi.fancyscrollview": {
+      "version": "1.9.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
