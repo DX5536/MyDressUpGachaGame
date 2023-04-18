@@ -11,17 +11,24 @@ public class GachaSummon_Button: MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI youGain_TMP;
 
-    [Header("Numbers_READ ONLY")]
+    //For easier chance manipulation down the line
+    [Header("ItemChance_SO where % are stored")]
     [SerializeField]
-    private int gainedItem_Index;
-    [SerializeField]
-    private int perCent;
+    private ItemChancesScriptableObject itemChancesScriptableObject;
 
     [Header("This is so we can start with something and not placeholder text")]
     [SerializeField]
     private string startBannerTitleName;
     [SerializeField]
-    private int startBannerIndex;
+    private int startBannerIndex = 0;
+
+    [Header("Numbers_READ ONLY")]
+    [SerializeField]
+    private int gainedItem_Index;
+    [SerializeField]
+    private int perCent;
+    [SerializeField]
+    private int[] localItemChances;
 
     //This value is to do an internal selection of which banner to pull from
     private int savedBannerIndex;
@@ -38,6 +45,12 @@ public class GachaSummon_Button: MonoBehaviour
         shopTitle_TMP.text = startBannerTitleName;
         savedBannerIndex = startBannerIndex;
 
+        //At start we copy and past itemChance_SO's value to localItemChances
+        localItemChances = new int[itemChancesScriptableObject.ItemChances.Length];
+        for (int i = 0;i < itemChancesScriptableObject.ItemChances.Length;i++)
+        {
+            localItemChances[i] = itemChancesScriptableObject.ItemChances[i];
+        }
     }
 
     // Update is called once per frame
@@ -64,30 +77,69 @@ public class GachaSummon_Button: MonoBehaviour
     {
         //A random number will be generate
         perCent = Random.Range(0, 100);
+
+        if (perCent < localItemChances[0])
+        {
+            gainedItem_Index = 0;
+        }
+
+        else if (perCent < localItemChances[0]
+                         + localItemChances[0 + 1])
+        {
+            gainedItem_Index = 0 + 1;
+        }
+
+        else if (perCent < localItemChances[0]
+                         + localItemChances[0 + 1]
+                         + localItemChances[0 + 2])
+        {
+            gainedItem_Index = 0 + 2;
+        }
+
+        else if (perCent < localItemChances[0]
+                         + localItemChances[0 + 1]
+                         + localItemChances[0 + 2]
+                         + localItemChances[0 + 3])
+        {
+            gainedItem_Index = 0 + 2;
+        }
+
+        else
+        {
+            Debug.Log("ERROR! It should not be possible to go below 0% or above 100%");
+        }
+
+
         //Short hair has 70%
-        if (perCent < 70)
+        /*if (perCent < itemChancesScriptableObject.ItemChances[0])
         {
             gainedItem_Index = 0;
         }
         //long hair has 20%
-        else if (perCent < 70 + 20)
+        else if (perCent < itemChancesScriptableObject.ItemChances[0]
+                         + itemChancesScriptableObject.ItemChances[1])
         {
             gainedItem_Index = 1;
         }
         //ponytail has 7%
-        else if (perCent < 70 + 20 + 7)
+        else if (perCent < itemChancesScriptableObject.ItemChances[0]
+                         + itemChancesScriptableObject.ItemChances[1]
+                         + itemChancesScriptableObject.ItemChances[2])
         {
             gainedItem_Index = 2;
         }
         //braid has 3%
-        else if (perCent < 70 + 20 + 7 + 3)
+        else if (perCent < itemChancesScriptableObject.ItemChances[0]
+                         + itemChancesScriptableObject.ItemChances[1]
+                         + itemChancesScriptableObject.ItemChances[2]
+                         + itemChancesScriptableObject.ItemChances[3])
         {
             gainedItem_Index = 3;
         }
         else
         {
             Debug.Log("ERROR! It should not be possible to go below 0% or above 100%");
-        }
+        }*/
 
         ExecuteSelectedBanner();
         gainedItem_TMP.enabled = true;
