@@ -1,20 +1,23 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GachaSummon_Button: MonoBehaviour
 {
-    [Header("Banner logic")]
+    [Header("Banner UI")]
     [SerializeField]
     private TextMeshProUGUI shopTitle_TMP;
     [SerializeField]
     private TextMeshProUGUI gainedItem_TMP;
     [SerializeField]
+    private Image gainedItem_IMG;
+    [SerializeField]
     private TextMeshProUGUI youGain_TMP;
 
     //For easier chance manipulation down the line
-    [Header("ItemChance_SO where % are stored")]
+    [Header("ItemChance_SO where values are stored")]
     [SerializeField]
-    private ItemChancesScriptableObject itemChancesScriptableObject;
+    private ItemChancesScriptableObject[] itemChancesScriptableObject;
 
     [Header("This is so we can start with something and not placeholder text")]
     [SerializeField]
@@ -27,8 +30,14 @@ public class GachaSummon_Button: MonoBehaviour
     private int gainedItem_Index;
     [SerializeField]
     private int perCent;
+
+    //Local values to copy/past from SO
+    [SerializeField]
+    private string[] localItemNames;
     [SerializeField]
     private int[] localItemChances;
+    [SerializeField]
+    private Sprite[] localItemImages;
 
     //This value is to do an internal selection of which banner to pull from
     private int savedBannerIndex;
@@ -38,19 +47,14 @@ public class GachaSummon_Button: MonoBehaviour
     {
         //At start we disable the component
         //Only visible upon click Summon! button
-        gainedItem_TMP.enabled = false;
-        youGain_TMP.enabled = false;
+        EnableGainedItemUI(false);
 
         //At start we will auto default the bannerName to "Hair" and bannerID to 0
         shopTitle_TMP.text = startBannerTitleName;
         savedBannerIndex = startBannerIndex;
 
-        //At start we copy and past itemChance_SO's value to localItemChances
-        localItemChances = new int[itemChancesScriptableObject.ItemChances.Length];
-        for (int i = 0;i < itemChancesScriptableObject.ItemChances.Length;i++)
-        {
-            localItemChances[i] = itemChancesScriptableObject.ItemChances[i];
-        }
+        //At start we copy/pasts 0. itemChance_SO's value to localItem
+        CopyPasteSOValuesToLocalValues(0);
     }
 
     // Update is called once per frame
@@ -64,8 +68,12 @@ public class GachaSummon_Button: MonoBehaviour
     {
         //Change the PanelTitle to the name
         shopTitle_TMP.text = bannerName;
+
+        //Deactivated previously gainedItem UI upon changing banner
+        EnableGainedItemUI(false);
     }
-    //public cuz Unity is a b for only allow 1 parameter in a button ;_;
+
+    //public cuz Unity is a b- for only allow 1 parameter in a button ;_;
     public void Selection_BannerID(int bannerID)
     {
         //Save the ID of the banner locally so we know which item to be summoned
@@ -84,117 +92,102 @@ public class GachaSummon_Button: MonoBehaviour
         }
 
         else if (perCent < localItemChances[0]
-                         + localItemChances[0 + 1])
-        {
-            gainedItem_Index = 0 + 1;
-        }
-
-        else if (perCent < localItemChances[0]
-                         + localItemChances[0 + 1]
-                         + localItemChances[0 + 2])
-        {
-            gainedItem_Index = 0 + 2;
-        }
-
-        else if (perCent < localItemChances[0]
-                         + localItemChances[0 + 1]
-                         + localItemChances[0 + 2]
-                         + localItemChances[0 + 3])
-        {
-            gainedItem_Index = 0 + 2;
-        }
-
-        else
-        {
-            Debug.Log("ERROR! It should not be possible to go below 0% or above 100%");
-        }
-
-
-        //Short hair has 70%
-        /*if (perCent < itemChancesScriptableObject.ItemChances[0])
-        {
-            gainedItem_Index = 0;
-        }
-        //long hair has 20%
-        else if (perCent < itemChancesScriptableObject.ItemChances[0]
-                         + itemChancesScriptableObject.ItemChances[1])
+                         + localItemChances[1])
         {
             gainedItem_Index = 1;
         }
-        //ponytail has 7%
-        else if (perCent < itemChancesScriptableObject.ItemChances[0]
-                         + itemChancesScriptableObject.ItemChances[1]
-                         + itemChancesScriptableObject.ItemChances[2])
+
+        else if (perCent < localItemChances[0]
+                         + localItemChances[1]
+                         + localItemChances[2])
         {
             gainedItem_Index = 2;
         }
-        //braid has 3%
-        else if (perCent < itemChancesScriptableObject.ItemChances[0]
-                         + itemChancesScriptableObject.ItemChances[1]
-                         + itemChancesScriptableObject.ItemChances[2]
-                         + itemChancesScriptableObject.ItemChances[3])
+
+        else if (perCent < localItemChances[0]
+                         + localItemChances[1]
+                         + localItemChances[2]
+                         + localItemChances[3])
         {
             gainedItem_Index = 3;
         }
+
         else
         {
-            Debug.Log("ERROR! It should not be possible to go below 0% or above 100%");
-        }*/
+            Debug.LogError("ERROR! It should not be possible to go below 0% or above 100% -> Check ScriptableObject");
+        }
 
         ExecuteSelectedBanner();
-        gainedItem_TMP.enabled = true;
-        youGain_TMP.enabled = true;
+        EnableGainedItemUI(true);
     }
 
     private void ExecuteSelectedBanner()
     {
-        switch (savedBannerIndex)
-        {
-            case 0:
-                HairBanner();
-                break;
-            case 1:
-                TopBanner();
-                break;
+        CopyPasteSOValuesToLocalValues(savedBannerIndex);
+        BannerDisplayItem();
+    }
 
+    //This method is all about copy & paste values from SO to local Var
+    //This allow for less typing error + faster typing
+    private void CopyPasteSOValuesToLocalValues(int chosenBannerIndex)
+    {
+        //Make sure array index is same length as SO (human = dumb) -> Length[] is the same anyway
+        localItemNames = new string[itemChancesScriptableObject[chosenBannerIndex].ItemChances.Length];
+        localItemChances = new int[itemChancesScriptableObject[chosenBannerIndex].ItemChances.Length];
+        localItemImages = new Sprite[itemChancesScriptableObject[chosenBannerIndex].ItemChances.Length];
+
+        //Auto copy/paste
+        for (int i = 0;i < itemChancesScriptableObject[chosenBannerIndex].ItemChances.Length;i++)
+        {
+            localItemNames[i] = itemChancesScriptableObject[chosenBannerIndex].ItemNames[i];
+            localItemChances[i] = itemChancesScriptableObject[chosenBannerIndex].ItemChances[i];
+            localItemImages[i] = itemChancesScriptableObject[chosenBannerIndex].ItemImages[i];
         }
     }
 
-    private void HairBanner()
+    //This will display the gained item (text + sprites) on the UI
+    private void BannerDisplayItem()
     {
         switch (gainedItem_Index)
         {
             case 0:
-                gainedItem_TMP.text = "short hair";
+                gainedItem_TMP.text = localItemNames[0];
+                gainedItem_IMG.sprite = localItemImages[0];
                 break;
             case 1:
-                gainedItem_TMP.text = "long hair";
+                gainedItem_TMP.text = localItemNames[1];
+                gainedItem_IMG.sprite = localItemImages[1];
                 break;
             case 2:
-                gainedItem_TMP.text = "ponytail";
+                gainedItem_TMP.text = localItemNames[2];
+                gainedItem_IMG.sprite = localItemImages[2];
                 break;
             case 3:
-                gainedItem_TMP.text = "braids";
+                gainedItem_TMP.text = localItemNames[3];
+                gainedItem_IMG.sprite = localItemImages[3];
                 break;
         }
     }
 
-    private void TopBanner()
+    //This is about activate/deactivate the gainedItem's UI elements
+    //public to access in [Close Shop] Button
+    public void EnableGainedItemUI(bool toEnableUI)
     {
-        switch (gainedItem_Index)
+        //If toEnableUI = false -> disable all the gainedItem UI
+        if (!toEnableUI)
         {
-            case 0:
-                gainedItem_TMP.text = "T-shirt";
-                break;
-            case 1:
-                gainedItem_TMP.text = "Vest";
-                break;
-            case 2:
-                gainedItem_TMP.text = "Bomber Jacket";
-                break;
-            case 3:
-                gainedItem_TMP.text = "Frilled Shirt";
-                break;
+            gainedItem_TMP.enabled = false;
+            gainedItem_IMG.enabled = false;
+            youGain_TMP.enabled = false;
         }
+
+        //if true -> enable all gainedItem UI
+        else
+        {
+            gainedItem_TMP.enabled = true;
+            gainedItem_IMG.enabled = true;
+            youGain_TMP.enabled = true;
+        }
+
     }
 }

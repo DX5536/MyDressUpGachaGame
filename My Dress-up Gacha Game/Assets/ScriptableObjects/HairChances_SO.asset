@@ -10,6 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af8885c9fbdba4440bdfbc1b9d374fed, type: 3}
-  m_Name: ItemChances_SO
+  m_Name: HairChances_SO
   m_EditorClassIdentifier: 
+  bannerItemIndex: 0
+  itemNames:
+  - Long Hair
+  - Ponytail
+  - Short Hair
+  - Braid
   itemChances: 46000000140000000700000003000000
+  itemImages:
+  - {fileID: 21300000, guid: 928c544e35a15fb4ca4c5523ac578bdf, type: 3}
+  - {fileID: 21300000, guid: 5d698c217e94c64428ab24b80256959b, type: 3}
+  - {fileID: 21300000, guid: 76439d78e0dfebc45ae0b0a1d81dae75, type: 3}
+  - {fileID: 21300000, guid: 74373303c5e12a74687063ba5f9f1e59, type: 3}
