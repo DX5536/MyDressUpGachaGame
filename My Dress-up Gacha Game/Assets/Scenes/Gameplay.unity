@@ -753,9 +753,11 @@ MonoBehaviour:
   gainedItem_TMP: {fileID: 1299068565}
   gainedItem_IMG: {fileID: 1773913185}
   youGain_TMP: {fileID: 1857377647}
+  summon_Button: {fileID: 0}
   itemChancesScriptableObject:
   - {fileID: 11400000, guid: 1abf8958f62c2224baa87b22996ff502, type: 2}
   - {fileID: 11400000, guid: b1fd17398480f4c42b2da70778e710ca, type: 2}
+  currencyScriptableObject: {fileID: 0}
   startBannerTitleName: Hair Banner
   startBannerIndex: 0
   gainedItem_Index: 0
@@ -976,6 +978,18 @@ MonoBehaviour:
       - m_Target: {fileID: 583681489}
         m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
         m_MethodName: SummonLogic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1127026093}
+        m_TargetAssemblyTypeName: SummonTicketCheckAndDisplay, Assembly-CSharp
+        m_MethodName: DisplaySummonTicket
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

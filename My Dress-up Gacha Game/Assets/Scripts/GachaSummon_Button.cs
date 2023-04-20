@@ -14,10 +14,16 @@ public class GachaSummon_Button: MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI youGain_TMP;
 
+    [SerializeField]
+    private Button summon_Button;
+
     //For easier chance manipulation down the line
     [Header("ItemChance_SO where values are stored")]
     [SerializeField]
     private ItemChancesScriptableObject[] itemChancesScriptableObject;
+
+    [SerializeField]
+    private CurrencyScriptableObject currencyScriptableObject;
 
     [Header("This is so we can start with something and not placeholder text")]
     [SerializeField]
@@ -55,6 +61,8 @@ public class GachaSummon_Button: MonoBehaviour
 
         //At start we copy/pasts 0. itemChance_SO's value to localItem
         CopyPasteSOValuesToLocalValues(0);
+
+        CheckEnoughSummonTicket();
     }
 
     // Update is called once per frame
@@ -119,6 +127,12 @@ public class GachaSummon_Button: MonoBehaviour
 
         ExecuteSelectedBanner();
         EnableGainedItemUI(true);
+
+        //Reduce summonTicket by 1 after summoning
+        currencyScriptableObject.SummonTicketAmount -= 1;
+
+        //Then check if there is still enough summonTicket
+        CheckEnoughSummonTicket();
     }
 
     private void ExecuteSelectedBanner()
@@ -189,5 +203,21 @@ public class GachaSummon_Button: MonoBehaviour
             youGain_TMP.enabled = true;
         }
 
+    }
+
+    //
+    private void CheckEnoughSummonTicket()
+    {
+        //If there is not enough tickets to summon
+        //disable button
+        if (currencyScriptableObject.SummonTicketAmount <= 0)
+        {
+            summon_Button.interactable = false;
+        }
+
+        else
+        {
+            summon_Button.interactable = true;
+        }
     }
 }

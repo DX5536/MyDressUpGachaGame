@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0991398d41704044b0ec45bba7aff80, type: 3}
   m_Name: In_GameCurrency_SO
   m_EditorClassIdentifier: 
-  summonTicketAmount: 0
+  summonTicketAmount: 3
   realMoneyAmount: 0
