@@ -753,13 +753,11 @@ MonoBehaviour:
   gainedItem_TMP: {fileID: 1299068565}
   gainedItem_IMG: {fileID: 1773913185}
   youGain_TMP: {fileID: 1857377647}
-  summon_Button: {fileID: 0}
+  summon_Button: {fileID: 633793194}
   itemChancesScriptableObject:
   - {fileID: 11400000, guid: 1abf8958f62c2224baa87b22996ff502, type: 2}
   - {fileID: 11400000, guid: b1fd17398480f4c42b2da70778e710ca, type: 2}
-  currencyScriptableObject: {fileID: 0}
-  startBannerTitleName: Hair Banner
-  startBannerIndex: 0
+  currencyScriptableObject: {fileID: 11400000, guid: 395c1129d054fd248a52843ad30b422c, type: 2}
   gainedItem_Index: 0
   perCent: 0
   localItemNames: []

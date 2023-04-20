@@ -25,13 +25,13 @@ public class GachaSummon_Button: MonoBehaviour
     [SerializeField]
     private CurrencyScriptableObject currencyScriptableObject;
 
-    [Header("This is so we can start with something and not placeholder text")]
-    [SerializeField]
+    //[Header("This is so we can start with something and not placeholder text")]
+    //[SerializeField]
     private string startBannerTitleName;
-    [SerializeField]
+    //[SerializeField]
     private int startBannerIndex = 0;
 
-    [Header("Numbers_READ ONLY")]
+    [Header("Numbers_READ ONLY!")]
     [SerializeField]
     private int gainedItem_Index;
     [SerializeField]
@@ -81,7 +81,7 @@ public class GachaSummon_Button: MonoBehaviour
         EnableGainedItemUI(false);
     }
 
-    //public cuz Unity is a b- for only allow 1 parameter in a button ;_;
+    //public because Unity is a b- for only allow 1 parameter in a button ;_;
     public void Selection_BannerID(int bannerID)
     {
         //Save the ID of the banner locally so we know which item to be summoned
@@ -128,7 +128,7 @@ public class GachaSummon_Button: MonoBehaviour
         ExecuteSelectedBanner();
         EnableGainedItemUI(true);
 
-        //Reduce summonTicket by 1 after summoning
+        //Reduce SummonTicketAmount in SO by 1 after summoning
         currencyScriptableObject.SummonTicketAmount -= 1;
 
         //Then check if there is still enough summonTicket
