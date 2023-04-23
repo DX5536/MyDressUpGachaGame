@@ -950,7 +950,7 @@ GameObject:
   - component: {fileID: 436322533}
   - component: {fileID: 436322534}
   m_Layer: 0
-  m_Name: InAppShop_Logic
+  m_Name: InAppShopUI_Logic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1717,7 +1717,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1588850462}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
@@ -3328,7 +3328,7 @@ RectTransform:
   - {fileID: 2142223193}
   - {fileID: 280816488}
   m_Father: {fileID: 7143830724178165213}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3615,7 +3615,7 @@ GameObject:
   - component: {fileID: 1127026092}
   - component: {fileID: 1127026093}
   m_Layer: 0
-  m_Name: SummonTicket_Logic
+  m_Name: GachaShopUI_Logic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3634,7 +3634,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1588850462}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1127026093
 MonoBehaviour:
@@ -4324,6 +4324,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1182837134}
         m_TargetAssemblyTypeName: OpenSpecificWindow, Assembly-CSharp
         m_MethodName: ChangeWindowStatus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 436322534}
+        m_TargetAssemblyTypeName: InAppShop, Assembly-CSharp
+        m_MethodName: DisplaySummonTicketAndMoney
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5316,8 +5328,8 @@ Transform:
   - {fileID: 525756218}
   - {fileID: 359262382}
   - {fileID: 1182837133}
-  - {fileID: 1127026092}
   - {fileID: 583681490}
+  - {fileID: 1127026092}
   - {fileID: 436322533}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -7542,7 +7554,7 @@ RectTransform:
   - {fileID: 2081157573}
   - {fileID: 2106171833}
   m_Father: {fileID: 7143830724178165213}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7675,7 +7687,7 @@ RectTransform:
   m_Children:
   - {fileID: 6108646846919854358}
   m_Father: {fileID: 7143830724178165213}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7846,11 +7858,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4273018079723958764}
   - {fileID: 8846939526372677238}
+  - {fileID: 4273018079723958764}
   - {fileID: 1303136208}
-  - {fileID: 981471226}
   - {fileID: 2365908641895588458}
+  - {fileID: 981471226}
   - {fileID: 1852659401}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -8089,6 +8101,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1127026093}
+        m_TargetAssemblyTypeName: SummonTicketCheckAndDisplay, Assembly-CSharp
+        m_MethodName: DisplaySummonTicket
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8710494276471884467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8126,7 +8150,7 @@ RectTransform:
   m_Children:
   - {fileID: 1885621188144572444}
   m_Father: {fileID: 7143830724178165213}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

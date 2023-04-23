@@ -9,12 +9,7 @@ public class SummonTicketCheckAndDisplay: MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI ticketAmount_TMP, ticketRemains_TMP;
 
-    [Header("READ_ONLY")]
-    [SerializeField]
-    private int localTicketAmount;
-
-    // Start is called before the first frame update
-    void OnEnable()
+    void Start()
     {
         DisplaySummonTicket();
     }
@@ -29,7 +24,7 @@ public class SummonTicketCheckAndDisplay: MonoBehaviour
     public void DisplaySummonTicket()
     {
         //Save values from SO to a local Variable 
-        localTicketAmount = currencyScriptableObject.SummonTicketAmount;
+        var localTicketAmount = currencyScriptableObject.SummonTicketAmount;
         //Start with pasting whatever amount of summonTicket in SO in UI
         ticketAmount_TMP.text = localTicketAmount.ToString();
         TicketOrTickets();
@@ -39,7 +34,7 @@ public class SummonTicketCheckAndDisplay: MonoBehaviour
     private void TicketOrTickets()
     {
         //if 1 or less -> "ticket";
-        if (localTicketAmount <= 1)
+        if (currencyScriptableObject.SummonTicketAmount <= 1)
         {
             ticketRemains_TMP.text = "ticket remains";
         }
