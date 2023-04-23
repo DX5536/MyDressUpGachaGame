@@ -10,10 +10,11 @@ public class SummonTicketCheckAndDisplay: MonoBehaviour
     private TextMeshProUGUI ticketAmount_TMP, ticketRemains_TMP;
 
     [Header("READ_ONLY")]
+    [SerializeField]
     private int localTicketAmount;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         DisplaySummonTicket();
     }

@@ -12,5 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0991398d41704044b0ec45bba7aff80, type: 3}
   m_Name: In_GameCurrency_SO
   m_EditorClassIdentifier: 
+  resetValueAtAwake: 1
   summonTicketAmount: 3
-  realMoneyAmount: 0
+  inAppPrices:
+  - 0.99
+  - 5.99
+  - 17.99
+  - 34.99
+  - 57.99
+  - 109.99
+  inAppBuyTicketsAmounts: 010000000600000013000000290000004800000092000000
+  totalRealMoneyAmount: 0
