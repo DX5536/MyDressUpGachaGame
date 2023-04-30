@@ -10,11 +10,7 @@ public class InventoryTabZoom_Button: MonoBehaviour
 
     [Header("Tween values")]
     [SerializeField]
-    private float tweenDuration;
-    [SerializeField]
-    private float tweenSpeed;
-    [SerializeField]
-    private bool tweenSnapping;
+    private DOTweenValuesScriptableObject tweenValuesScriptableObject;
 
     [Header("TweenScale values")]
     [SerializeField]
@@ -47,32 +43,42 @@ public class InventoryTabZoom_Button: MonoBehaviour
     //and reset View -> Unlike ZoomOut, this is immediately 
     public void ResetZoom()
     {
-        baseBody.DOMove(startingPosGO.transform.position, 0, tweenSnapping);
+        baseBody.DOMove(startingPosGO.transform.position,
+                        0,
+                        tweenValuesScriptableObject.TweenSnapping);
         baseBody.DOScale(1, 0);
     }
 
     public void HairHead_ZoomIn()
     {
-        baseBody.DOMove(tweenHairHeadGoal_GO.transform.position, tweenDuration, tweenSnapping);
-        baseBody.DOScale(hairHeadScaleAmount, tweenSpeed);
+        baseBody.DOMove(tweenHairHeadGoal_GO.transform.position,
+                        tweenValuesScriptableObject.TweenDuration,
+                        tweenValuesScriptableObject.TweenSnapping);
+        baseBody.DOScale(hairHeadScaleAmount, tweenValuesScriptableObject.TweenSpeed);
     }
 
     public void Torso_ZoomIn()
     {
-        baseBody.DOMove(tweenTorsoGoal_GO.transform.position, tweenDuration, tweenSnapping);
-        baseBody.DOScale(torsoScaleAmount, tweenSpeed);
+        baseBody.DOMove(tweenTorsoGoal_GO.transform.position,
+                        tweenValuesScriptableObject.TweenDuration,
+                        tweenValuesScriptableObject.TweenSnapping);
+        baseBody.DOScale(torsoScaleAmount, tweenValuesScriptableObject.TweenSpeed);
 
     }
 
     public void Legs_ZoomIn()
     {
-        baseBody.DOMove(tweenLegsGoal_GO.transform.position, tweenDuration, tweenSnapping);
-        baseBody.DOScale(legsScaleAmount, tweenSpeed);
+        baseBody.DOMove(tweenLegsGoal_GO.transform.position,
+                        tweenValuesScriptableObject.TweenDuration,
+                        tweenValuesScriptableObject.TweenSnapping);
+        baseBody.DOScale(legsScaleAmount, tweenValuesScriptableObject.TweenSpeed);
     }
 
     public void FullBody_ZoomOut()
     {
-        baseBody.DOMove(startingPosGO.transform.position, tweenDuration, tweenSnapping);
-        baseBody.DOScale(1, tweenSpeed);
+        baseBody.DOMove(startingPosGO.transform.position,
+                        tweenValuesScriptableObject.TweenDuration,
+                        tweenValuesScriptableObject.TweenSnapping);
+        baseBody.DOScale(1, tweenValuesScriptableObject.TweenSpeed);
     }
 }
