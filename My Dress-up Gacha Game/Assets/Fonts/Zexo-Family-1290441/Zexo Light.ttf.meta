@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 8b8666c8532cb9b41ac73e33e294dcf8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Zexo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1b8f2da56ccd70e40934120fa76f6dab, type: 3}
+  - {fileID: 12800000, guid: b59ce8eb6b7ac0a4c851a35fbe510297, type: 3}
+  - {fileID: 12800000, guid: 3a109e4d7ad03864f8535044ca9e106b, type: 3}
+  - {fileID: 12800000, guid: 984d2372b0c45de47a89398f02b0022c, type: 3}
+  - {fileID: 12800000, guid: 93e22cf76989a534299e7201e3a7e2cb, type: 3}
+  - {fileID: 12800000, guid: 5772aa6664155bc4d898cef5ad80adc9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
