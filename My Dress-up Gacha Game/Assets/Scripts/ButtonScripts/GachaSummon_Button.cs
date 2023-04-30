@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,12 +23,19 @@ public class GachaSummon_Button: MonoBehaviour
     [SerializeField]
     private ItemChancesScriptableObject[] itemChancesScriptableObject;
 
+
     [SerializeField]
     private CurrencyScriptableObject currencyScriptableObject;
 
+    [Header("Tween Values")]
+    [SerializeField]
+    private DOTweenValuesScriptableObject tweenValuesScriptableObject;
+    [SerializeField]
+    private float tweenScale;
+
     //[Header("This is so we can start with something and not placeholder text")]
     //[SerializeField]
-    private string startBannerTitleName;
+    private string startBannerTitleName = "Hair Banner";
     //[SerializeField]
     private int startBannerIndex = 0;
 
@@ -61,8 +69,8 @@ public class GachaSummon_Button: MonoBehaviour
 
         //At start we copy/pasts 0. itemChance_SO's value to localItem
         CopyPasteSOValuesToLocalValues(0);
-
         CheckEnoughSummonTicket();
+
     }
 
     // Update is called once per frame
@@ -162,6 +170,7 @@ public class GachaSummon_Button: MonoBehaviour
     //This will display the gained item (text + sprites) on the UI
     private void BannerDisplayItem()
     {
+        GainedItem_TweenAnimation();
         switch (gainedItem_Index)
         {
             case 0:
@@ -179,6 +188,10 @@ public class GachaSummon_Button: MonoBehaviour
             case 3:
                 gainedItem_TMP.text = localItemNames[3];
                 gainedItem_IMG.sprite = localItemImages[3];
+                break;
+            case 4:
+                gainedItem_TMP.text = localItemNames[4];
+                gainedItem_IMG.sprite = localItemImages[4];
                 break;
         }
     }
@@ -205,8 +218,9 @@ public class GachaSummon_Button: MonoBehaviour
 
     }
 
-    //
-    private void CheckEnoughSummonTicket()
+    //public to access from GachaShop Button
+    //Else there is a bug that disable button, despite go out and buy more from In-App Shop
+    public void CheckEnoughSummonTicket()
     {
         //If there is not enough tickets to summon
         //disable button
@@ -219,5 +233,14 @@ public class GachaSummon_Button: MonoBehaviour
         {
             summon_Button.interactable = true;
         }
+    }
+
+    private void GainedItem_TweenAnimation()
+    {
+        gainedItem_TMP.transform.localScale = Vector3.zero;
+        gainedItem_IMG.color = new Color(255, 255, 255, 0);
+
+        gainedItem_TMP.DOScale(tweenScale, tweenValuesScriptableObject.TweenDuration);
+        gainedItem_IMG.DOFade(1, tweenValuesScriptableObject.TweenDuration);
     }
 }
