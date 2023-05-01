@@ -14,7 +14,9 @@ public class InventoryTabZoom_Button: MonoBehaviour
 
     [Header("TweenScale values")]
     [SerializeField]
-    private float hairHeadScaleAmount;
+    private float hairScaleAmount;
+    [SerializeField]
+    private float headScaleAmount;
     [SerializeField]
     private float torsoScaleAmount;
     [SerializeField]
@@ -22,7 +24,7 @@ public class InventoryTabZoom_Button: MonoBehaviour
 
 
     [SerializeField]
-    private RectTransform tweenHairHeadGoal_GO, tweenTorsoGoal_GO, tweenLegsGoal_GO;
+    private RectTransform tweenHairGoal_GO, tweenHeadGoal_GO, tweenTorsoGoal_GO, tweenLegsGoal_GO;
 
 
     // Start is called before the first frame update
@@ -49,12 +51,20 @@ public class InventoryTabZoom_Button: MonoBehaviour
         baseBody.DOScale(1, 0);
     }
 
-    public void HairHead_ZoomIn()
+    public void Hair_ZoomIn()
     {
-        baseBody.DOMove(tweenHairHeadGoal_GO.transform.position,
+        baseBody.DOMove(tweenHairGoal_GO.transform.position,
                         tweenValuesScriptableObject.TweenDuration,
                         tweenValuesScriptableObject.TweenSnapping);
-        baseBody.DOScale(hairHeadScaleAmount, tweenValuesScriptableObject.TweenSpeed);
+        baseBody.DOScale(hairScaleAmount, tweenValuesScriptableObject.TweenSpeed);
+    }
+
+    public void Head_ZoomIn()
+    {
+        baseBody.DOMove(tweenHeadGoal_GO.transform.position,
+                        tweenValuesScriptableObject.TweenDuration,
+                        tweenValuesScriptableObject.TweenSnapping);
+        baseBody.DOScale(headScaleAmount, tweenValuesScriptableObject.TweenSpeed);
     }
 
     public void Torso_ZoomIn()
