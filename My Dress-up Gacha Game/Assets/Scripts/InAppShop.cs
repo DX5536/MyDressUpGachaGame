@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class InAppShop: MonoBehaviour
@@ -49,6 +49,6 @@ public class InAppShop: MonoBehaviour
 
         //Start with pasting whatever amount of summonTicket in SO in UI
         ticketAmount_TMP.text = localTicketAmount.ToString();
-        totalMoneyAmount_TMP.text = localMoneyAmount.ToString();
+        totalMoneyAmount_TMP.text = localMoneyAmount.ToString() + "€";
     }
 }
