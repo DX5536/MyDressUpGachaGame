@@ -14,6 +14,8 @@ public class GachaSummon_Button: MonoBehaviour
     private Image gainedItem_IMG;
     [SerializeField]
     private TextMeshProUGUI youGain_TMP;
+    [SerializeField]
+    private GameObject summon1x_Panel, summon10x_Panel;
 
     [SerializeField]
     private Button summon_Button;
@@ -56,6 +58,27 @@ public class GachaSummon_Button: MonoBehaviour
     //This value is to do an internal selection of which banner to pull from
     private int savedBannerIndex;
 
+    public int SavedBannerIndex
+    {
+        get => savedBannerIndex;
+        set => savedBannerIndex = value;
+    }
+    public string[] LocalItemNames
+    {
+        get => localItemNames;
+        set => localItemNames = value;
+    }
+    public int[] LocalItemChances
+    {
+        get => localItemChances;
+        set => localItemChances = value;
+    }
+    public Sprite[] LocalItemImages
+    {
+        get => localItemImages;
+        set => localItemImages = value;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +89,8 @@ public class GachaSummon_Button: MonoBehaviour
         //At start we will auto default the bannerName to "Hair" and bannerID to 0
         shopTitle_TMP.text = startBannerTitleName;
         savedBannerIndex = startBannerIndex;
+
+        summon1x_Panel.SetActive(false);
 
         //At start we copy/pasts 0. itemChance_SO's value to localItem
         CopyPasteSOValuesToLocalValues(0);
@@ -99,6 +124,11 @@ public class GachaSummon_Button: MonoBehaviour
     //public method to access in Summon! button
     public void SummonLogic()
     {
+        //Make sure summon10x_Panel is deactivated
+        summon10x_Panel.SetActive(false);
+        //and summon1x_Panel is activated
+        summon1x_Panel.SetActive(true);
+
         //A random number will be generate
         perCent = Random.Range(0, 100);
 
