@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class TenGachaSummon_Button: MonoBehaviour
     private GameObject summon1x_Panel, summon10x_Panel;
 
     [SerializeField]
-    private Button summon_Button;
+    private Button summon1x_Button, summon10x_Button;
 
     [SerializeField]
     private GachaSummon_Button gachaSummon_ButtonScript;
@@ -29,6 +30,8 @@ public class TenGachaSummon_Button: MonoBehaviour
     private DOTweenValuesScriptableObject tweenValuesScriptableObject;
     [SerializeField]
     private float tweenScale;
+    [SerializeField]
+    private float tweenAnimationDelayDuration;
 
     [Header("Numbers_READ ONLY!")]
     //[SerializeField]
@@ -47,7 +50,24 @@ public class TenGachaSummon_Button: MonoBehaviour
     }
 
     //public method to access in Summon! 10x button
-    public void SummonLogic()
+    public void SummonLogic_With_WithoutDelay(bool withDelay)
+    {
+        //Delay will make each summoned item pop up 1-by-1 (not knowing what is the next item)
+        if (withDelay)
+        {
+            DisablePlaceholderSlotIn10xPanel();
+            StartCoroutine(SummonLogicWithDelay());
+        }
+
+        //Without Delay will make all 10 items pop up at once
+        else
+        {
+            SummonLogic();
+        }
+
+    }
+
+    private IEnumerator SummonLogicWithDelay()
     {
         //Make sure summon1x_Panel is deactivated
         summon1x_Panel.SetActive(false);
@@ -57,6 +77,77 @@ public class TenGachaSummon_Button: MonoBehaviour
         //A loop that will go through 10x times
         for (int i = 0;i < pullCount;i++)
         {
+            //Temporary disable SummonButton
+            summon1x_Button.interactable = false;
+            summon10x_Button.interactable = false;
+
+            //A random number will be generate
+            perCent = Random.Range(0, 100);
+
+            if (perCent < gachaSummon_ButtonScript.LocalItemChances[0])
+            {
+                gainedItem_Index = 0;
+            }
+
+            else if (perCent < gachaSummon_ButtonScript.LocalItemChances[0]
+                             + gachaSummon_ButtonScript.LocalItemChances[1])
+            {
+                gainedItem_Index = 1;
+            }
+
+            else if (perCent < gachaSummon_ButtonScript.LocalItemChances[0]
+                             + gachaSummon_ButtonScript.LocalItemChances[1]
+                             + gachaSummon_ButtonScript.LocalItemChances[2])
+            {
+                gainedItem_Index = 2;
+            }
+
+            else if (perCent < gachaSummon_ButtonScript.LocalItemChances[0]
+                             + gachaSummon_ButtonScript.LocalItemChances[1]
+                             + gachaSummon_ButtonScript.LocalItemChances[2]
+                             + gachaSummon_ButtonScript.LocalItemChances[3])
+            {
+                gainedItem_Index = 3;
+            }
+
+            else
+            {
+                Debug.LogError("ERROR! It should not be possible to go below 0% or above 100% -> Check ScriptableObject");
+            }
+
+            yield return new WaitForSeconds(tweenAnimationDelayDuration);
+
+            //The item will be displayed on the according slot [i]
+            BannerDisplayItem(i);
+
+        }
+
+        //Reduce SummonTicketAmount in SO by 10 after summoning
+        currencyScriptableObject.SummonTicketAmount -= 10;
+
+        //Then check if there is still enough summonTicket
+        CheckEnoughSummonTicket();
+
+        //Enable SummonButton after loop
+        summon1x_Button.interactable = true;
+        summon10x_Button.interactable = true;
+
+    }
+
+    private void SummonLogic()
+    {
+        //Make sure summon1x_Panel is deactivated
+        summon1x_Panel.SetActive(false);
+        //and summon10x_Panel is activated
+        summon10x_Panel.SetActive(true);
+
+        //A loop that will go through 10x times
+        for (int i = 0;i < pullCount;i++)
+        {
+            //Temporary disable SummonButton
+            summon1x_Button.interactable = false;
+            summon10x_Button.interactable = false;
+
             //A random number will be generate
             perCent = Random.Range(0, 100);
 
@@ -93,6 +184,7 @@ public class TenGachaSummon_Button: MonoBehaviour
 
             //The item will be displayed on the according slot [i]
             BannerDisplayItem(i);
+
         }
 
         //Reduce SummonTicketAmount in SO by 10 after summoning
@@ -100,6 +192,10 @@ public class TenGachaSummon_Button: MonoBehaviour
 
         //Then check if there is still enough summonTicket
         CheckEnoughSummonTicket();
+
+        //Enable SummonButton after loop
+        summon1x_Button.interactable = true;
+        summon10x_Button.interactable = true;
     }
 
     //This will display the gained item (text + sprites) on the UI
@@ -146,21 +242,36 @@ public class TenGachaSummon_Button: MonoBehaviour
         //disable button
         if (currencyScriptableObject.SummonTicketAmount <= 10)
         {
-            summon_Button.interactable = false;
+            summon10x_Button.interactable = false;
         }
 
         else
         {
-            summon_Button.interactable = true;
+            summon10x_Button.interactable = true;
         }
     }
 
-    private void GainedItem_TweenAnimation(int GainedItem_TweenAnimation_Index)
+    private void GainedItem_TweenAnimation(int gainedItem_TweenAnimation_Index)
     {
-        gainedItem10x_TMP[GainedItem_TweenAnimation_Index].transform.localScale = Vector3.zero;
-        gainedItem10x_IMG[GainedItem_TweenAnimation_Index].color = new Color(255, 255, 255, 0);
+        //Set the slot active each time when its turn
+        gainedItem10x_IMG[gainedItem_TweenAnimation_Index].gameObject.SetActive(true);
+        gainedItem10x_TMP[gainedItem_TweenAnimation_Index].gameObject.SetActive(true);
 
-        gainedItem10x_TMP[GainedItem_TweenAnimation_Index].DOScale(tweenScale, tweenValuesScriptableObject.TweenDuration);
-        gainedItem10x_IMG[GainedItem_TweenAnimation_Index].DOFade(1, tweenValuesScriptableObject.TweenDuration);
+        //Tween animation
+        gainedItem10x_TMP[gainedItem_TweenAnimation_Index].transform.localScale = Vector3.zero;
+        gainedItem10x_IMG[gainedItem_TweenAnimation_Index].color = new Color(255, 255, 255, 0);
+
+        gainedItem10x_TMP[gainedItem_TweenAnimation_Index].DOScale(tweenScale, tweenValuesScriptableObject.TweenDuration);
+        gainedItem10x_IMG[gainedItem_TweenAnimation_Index].DOFade(1, tweenValuesScriptableObject.TweenDuration);
+    }
+
+    private void DisablePlaceholderSlotIn10xPanel()
+    {
+        //if button is not interactable cuz the items summon animation is playing
+        for (int i = 0;i < pullCount;i++)
+        {
+            gainedItem10x_IMG[i].gameObject.SetActive(false);
+            gainedItem10x_TMP[i].gameObject.SetActive(false);
+        }
     }
 }
