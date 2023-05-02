@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: In_GameCurrency_SO
   m_EditorClassIdentifier: 
   resetValueAtAwake: 1
-  summonTicketAmount: 3
+  summonTicketAmount: 8
   inAppPrices:
   - 0.99
   - 5.99
@@ -22,4 +22,4 @@ MonoBehaviour:
   - 57.99
   - 109.99
   inAppBuyTicketsAmounts: 010000000600000013000000290000004800000092000000
-  totalRealMoneyAmount: 0
+  totalRealMoneyAmount: 329.97
