@@ -4954,6 +4954,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b1fd17398480f4c42b2da70778e710ca, type: 2}
   - {fileID: 11400000, guid: cc9b52104307bb14f80e2a7fda3aa018, type: 2}
   - {fileID: 11400000, guid: a7addc89353b54e4390c9807a3ea1bd1, type: 2}
+  itemsGainedScriptableObject: {fileID: 11400000, guid: 5edeb85c09da9a7409b0d7b88c830023, type: 2}
   currencyScriptableObject: {fileID: 11400000, guid: 395c1129d054fd248a52843ad30b422c, type: 2}
   tweenValuesScriptableObject: {fileID: 11400000, guid: c18050c1512f2954986e18f6b001a380, type: 2}
   tweenScale: 1
@@ -13998,6 +13999,7 @@ MonoBehaviour:
   summon10x_Button: {fileID: 2064367267}
   gachaSummon_ButtonScript: {fileID: 583681489}
   currencyScriptableObject: {fileID: 11400000, guid: 395c1129d054fd248a52843ad30b422c, type: 2}
+  itemsGainedScriptableObject: {fileID: 0}
   tweenValuesScriptableObject: {fileID: 11400000, guid: c18050c1512f2954986e18f6b001a380, type: 2}
   tweenScale: 1
   tweenAnimationDelayDuration: 0.5

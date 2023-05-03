@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -25,6 +26,8 @@ public class GachaSummon_Button: MonoBehaviour
     [SerializeField]
     private ItemChancesScriptableObject[] itemChancesScriptableObject;
 
+    [SerializeField]
+    private ItemsGainedScriptableObject itemsGainedScriptableObject;
 
     [SerializeField]
     private CurrencyScriptableObject currencyScriptableObject;
@@ -79,6 +82,21 @@ public class GachaSummon_Button: MonoBehaviour
         set => localItemImages = value;
     }
 
+    private void OnEnable()
+    {
+        if (itemsGainedScriptableObject.ResetGainedItemsValue)
+        {
+            for (int i = 0;i < itemsGainedScriptableObject.HasGainedHairItems.Length;i++)
+            {
+                itemsGainedScriptableObject.HasGainedHairItems[i] = false;
+                itemsGainedScriptableObject.HasGainedHeadItems[i] = false;
+                itemsGainedScriptableObject.HasGainedTorsoItems[i] = false;
+                itemsGainedScriptableObject.HasGainedLegItems[i] = false;
+                itemsGainedScriptableObject.HasGainedMiscItems[i] = false;
+            }
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -130,7 +148,7 @@ public class GachaSummon_Button: MonoBehaviour
         summon1x_Panel.SetActive(true);
 
         //A random number will be generate
-        perCent = Random.Range(0, 100);
+        perCent = UnityEngine.Random.Range(0, 100);
 
         if (perCent < localItemChances[0])
         {
@@ -198,6 +216,7 @@ public class GachaSummon_Button: MonoBehaviour
     }
 
     //This will display the gained item (text + sprites) on the UI
+    //And save the Item as "have" aka. hasGainedXXXItem = true
     private void BannerDisplayItem()
     {
         GainedItem_TweenAnimation();
@@ -206,22 +225,96 @@ public class GachaSummon_Button: MonoBehaviour
             case 0:
                 gainedItem_TMP.text = localItemNames[0];
                 gainedItem_IMG.sprite = localItemImages[0];
+
+                SavedDisplayItem(0);
                 break;
             case 1:
                 gainedItem_TMP.text = localItemNames[1];
                 gainedItem_IMG.sprite = localItemImages[1];
+
+                SavedDisplayItem(1);
                 break;
             case 2:
                 gainedItem_TMP.text = localItemNames[2];
                 gainedItem_IMG.sprite = localItemImages[2];
+
+                SavedDisplayItem(2);
                 break;
             case 3:
                 gainedItem_TMP.text = localItemNames[3];
                 gainedItem_IMG.sprite = localItemImages[3];
+
+                SavedDisplayItem(3);
                 break;
             case 4:
                 gainedItem_TMP.text = localItemNames[4];
                 gainedItem_IMG.sprite = localItemImages[4];
+
+                SavedDisplayItem(4);
+                break;
+        }
+    }
+
+    //This method will mark the gained item on which banner, based on chosenBannerIndex, to "HasGained"
+    //For saving purposes and to display in Inventory (button being interactable -> equip item)
+    private void SavedDisplayItem(int saveGainedItemID)
+    {
+        switch (savedBannerIndex)
+        {
+            case 0:
+                if (!itemsGainedScriptableObject.HasGainedHairItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedHairItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained HAIR item at index " +
+                        Array.IndexOf(itemsGainedScriptableObject.HasGainedHairItems, saveGainedItemID));
+                }
+                break;
+            case 1:
+                if (!itemsGainedScriptableObject.HasGainedHeadItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedHeadItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained HEAD item at index " +
+                        Array.IndexOf(itemsGainedScriptableObject.HasGainedHeadItems, saveGainedItemID));
+                }
+                break;
+            case 2:
+                if (!itemsGainedScriptableObject.HasGainedTorsoItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedTorsoItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained TORSO item at index "
+                        + Array.IndexOf(itemsGainedScriptableObject.HasGainedTorsoItems, saveGainedItemID));
+                }
+                break;
+            case 3:
+                if (!itemsGainedScriptableObject.HasGainedLegItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedLegItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained LEG item at index "
+                        + Array.IndexOf(itemsGainedScriptableObject.HasGainedMiscItems, saveGainedItemID));
+                }
+                break;
+            case 4:
+                if (!itemsGainedScriptableObject.HasGainedMiscItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedMiscItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained MISC item at index "
+                        + Array.IndexOf(itemsGainedScriptableObject.HasGainedMiscItems, saveGainedItemID));
+                }
                 break;
         }
     }
@@ -273,4 +366,6 @@ public class GachaSummon_Button: MonoBehaviour
         gainedItem_TMP.DOScale(tweenScale, tweenValuesScriptableObject.TweenDuration);
         gainedItem_IMG.DOFade(1, tweenValuesScriptableObject.TweenDuration);
     }
+
+
 }

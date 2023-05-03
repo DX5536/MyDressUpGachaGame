@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using TMPro;
@@ -22,8 +23,11 @@ public class TenGachaSummon_Button: MonoBehaviour
     [SerializeField]
     private GachaSummon_Button gachaSummon_ButtonScript;
 
+    [Header("Important Scriptable Objects")]
     [SerializeField]
     private CurrencyScriptableObject currencyScriptableObject;
+    [SerializeField]
+    private ItemsGainedScriptableObject itemsGainedScriptableObject;
 
     [Header("Tween Values")]
     [SerializeField]
@@ -82,7 +86,7 @@ public class TenGachaSummon_Button: MonoBehaviour
             summon10x_Button.interactable = false;
 
             //A random number will be generate
-            perCent = Random.Range(0, 100);
+            perCent = UnityEngine.Random.Range(0, 100);
 
             if (perCent < gachaSummon_ButtonScript.LocalItemChances[0])
             {
@@ -149,7 +153,7 @@ public class TenGachaSummon_Button: MonoBehaviour
             summon10x_Button.interactable = false;
 
             //A random number will be generate
-            perCent = Random.Range(0, 100);
+            perCent = UnityEngine.Random.Range(0, 100);
 
             if (perCent < gachaSummon_ButtonScript.LocalItemChances[0])
             {
@@ -212,25 +216,100 @@ public class TenGachaSummon_Button: MonoBehaviour
             case 0:
                 gainedItem10x_TMP[bannerDisplayItem_Index].text = gachaSummon_ButtonScript.LocalItemNames[0];
                 gainedItem10x_IMG[bannerDisplayItem_Index].sprite = gachaSummon_ButtonScript.LocalItemImages[0];
+
+                SavedDisplayItem(0);
                 break;
             case 1:
                 gainedItem10x_TMP[bannerDisplayItem_Index].text = gachaSummon_ButtonScript.LocalItemNames[1];
                 gainedItem10x_IMG[bannerDisplayItem_Index].sprite = gachaSummon_ButtonScript.LocalItemImages[1];
+
+                SavedDisplayItem(1);
                 break;
             case 2:
                 gainedItem10x_TMP[bannerDisplayItem_Index].text = gachaSummon_ButtonScript.LocalItemNames[2];
                 gainedItem10x_IMG[bannerDisplayItem_Index].sprite = gachaSummon_ButtonScript.LocalItemImages[2];
+
+                SavedDisplayItem(2);
                 break;
             case 3:
                 gainedItem10x_TMP[bannerDisplayItem_Index].text = gachaSummon_ButtonScript.LocalItemNames[3];
                 gainedItem10x_IMG[bannerDisplayItem_Index].sprite = gachaSummon_ButtonScript.LocalItemImages[3];
+
+                SavedDisplayItem(3);
                 break;
             case 4:
                 gainedItem10x_TMP[bannerDisplayItem_Index].text = gachaSummon_ButtonScript.LocalItemNames[4];
                 gainedItem10x_IMG[bannerDisplayItem_Index].sprite = gachaSummon_ButtonScript.LocalItemImages[4];
+
+                SavedDisplayItem(4);
                 break;
         }
-        Debug.Log("Display gainedItem10x_TMP/IMG at index " + bannerDisplayItem_Index);
+
+        //Debug.Log("Display gainedItem10x_TMP/IMG at index " + bannerDisplayItem_Index);
+    }
+
+    //This method will mark the gained item on which banner, based on chosenBannerIndex, to "HasGained"
+    //For saving purposes and to display in Inventory (button being interactable -> equip item)
+    private void SavedDisplayItem(int saveGainedItemID)
+    {
+        switch (gachaSummon_ButtonScript.SavedBannerIndex)
+        {
+            case 0:
+                if (!itemsGainedScriptableObject.HasGainedHairItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedHairItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained HAIR item at index " +
+                        Array.IndexOf(itemsGainedScriptableObject.HasGainedHairItems, saveGainedItemID));
+                }
+                break;
+            case 1:
+                if (!itemsGainedScriptableObject.HasGainedHeadItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedHeadItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained HEAD item at index " +
+                        Array.IndexOf(itemsGainedScriptableObject.HasGainedHeadItems, saveGainedItemID));
+                }
+                break;
+            case 2:
+                if (!itemsGainedScriptableObject.HasGainedTorsoItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedTorsoItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained TORSO item at index "
+                        + Array.IndexOf(itemsGainedScriptableObject.HasGainedTorsoItems, saveGainedItemID));
+                }
+                break;
+            case 3:
+                if (!itemsGainedScriptableObject.HasGainedLegItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedLegItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained LEG item at index "
+                        + Array.IndexOf(itemsGainedScriptableObject.HasGainedLegItems, saveGainedItemID));
+                }
+                break;
+            case 4:
+                if (!itemsGainedScriptableObject.HasGainedMiscItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedMiscItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained MISC item at index "
+                        + Array.IndexOf(itemsGainedScriptableObject.HasGainedMiscItems, saveGainedItemID));
+                }
+                break;
+        }
     }
 
 
