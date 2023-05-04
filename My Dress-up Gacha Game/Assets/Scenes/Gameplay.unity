@@ -13110,6 +13110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsGainedScriptableObject: {fileID: 11400000, guid: 5edeb85c09da9a7409b0d7b88c830023, type: 2}
   shopTitle_TMP: {fileID: 1206577111}
+  youGain_TMP: {fileID: 1857377647}
   summon1x_Panel: {fileID: 2001824456}
   summon10x_Panel: {fileID: 1381203490}
 --- !u!4 &1515847274
@@ -14045,7 +14046,12 @@ MonoBehaviour:
   summon10x_Panel: {fileID: 1381203490}
   summon1x_Button: {fileID: 633793194}
   summon10x_Button: {fileID: 2064367267}
-  itemChancesScriptableObject: []
+  itemChancesScriptableObject:
+  - {fileID: 11400000, guid: 1abf8958f62c2224baa87b22996ff502, type: 2}
+  - {fileID: 11400000, guid: fc0846925f0350d44b29a83202e816c0, type: 2}
+  - {fileID: 11400000, guid: b1fd17398480f4c42b2da70778e710ca, type: 2}
+  - {fileID: 11400000, guid: cc9b52104307bb14f80e2a7fda3aa018, type: 2}
+  - {fileID: 11400000, guid: a7addc89353b54e4390c9807a3ea1bd1, type: 2}
   currencyScriptableObject: {fileID: 11400000, guid: 395c1129d054fd248a52843ad30b422c, type: 2}
   itemsGainedScriptableObject: {fileID: 11400000, guid: 5edeb85c09da9a7409b0d7b88c830023, type: 2}
   tweenValuesScriptableObject: {fileID: 11400000, guid: c18050c1512f2954986e18f6b001a380, type: 2}

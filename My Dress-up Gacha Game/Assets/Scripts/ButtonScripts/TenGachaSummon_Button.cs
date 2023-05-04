@@ -70,6 +70,8 @@ public class TenGachaSummon_Button: MonoBehaviour
     //public method to access in Summon! 10x button
     public void SummonLogic_With_WithoutDelay(bool withDelay)
     {
+        youGain_TMP.enabled = true;
+
         //Delay will make each summoned item pop up 1-by-1 (not knowing what is the next item)
         if (withDelay)
         {
