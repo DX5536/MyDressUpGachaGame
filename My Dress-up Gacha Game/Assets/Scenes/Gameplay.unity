@@ -630,20 +630,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 583681489}
-        m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
-        m_MethodName: Selection_BannerName
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Torso Banner
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 583681489}
-        m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
+      - m_Target: {fileID: 1515847273}
+        m_TargetAssemblyTypeName: BannerSelection_Button, Assembly-CSharp
         m_MethodName: Selection_BannerID
         m_Mode: 3
         m_Arguments:
@@ -651,7 +639,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Torso Banner
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1515847273}
+        m_TargetAssemblyTypeName: BannerSelection_Button, Assembly-CSharp
+        m_MethodName: Selection_BannerName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: Torso Banner
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &29892061
@@ -934,7 +934,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1588850462}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &59270199
 MonoBehaviour:
@@ -2033,28 +2033,28 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 583681489}
-        m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
-        m_MethodName: Selection_BannerName
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Legs Banner
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 583681489}
-        m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
+      - m_Target: {fileID: 1515847273}
+        m_TargetAssemblyTypeName: BannerSelection_Button, Assembly-CSharp
         m_MethodName: Selection_BannerID
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: Legs Banner
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1515847273}
+        m_TargetAssemblyTypeName: BannerSelection_Button, Assembly-CSharp
+        m_MethodName: Selection_BannerName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Legs Banner
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &247412220
@@ -2666,7 +2666,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1588850462}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &318107210
 MonoBehaviour:
@@ -3284,7 +3284,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1588850462}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &436322534
 MonoBehaviour:
@@ -10102,7 +10102,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1588850462}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1127026093
 MonoBehaviour:
@@ -10149,7 +10149,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1588850462}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1127606674
 MonoBehaviour:
@@ -11910,10 +11910,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 583681489}
-        m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
-        m_MethodName: Selection_BannerName
-        m_Mode: 5
+      - m_Target: {fileID: 1515847273}
+        m_TargetAssemblyTypeName: BannerSelection_Button, Assembly-CSharp
+        m_MethodName: Selection_BannerID
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11922,16 +11922,16 @@ MonoBehaviour:
           m_StringArgument: Hair Banner
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 583681489}
-        m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
-        m_MethodName: Selection_BannerID
-        m_Mode: 3
+      - m_Target: {fileID: 1515847273}
+        m_TargetAssemblyTypeName: BannerSelection_Button, Assembly-CSharp
+        m_MethodName: Selection_BannerName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Hair Banner
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1349835666
@@ -13079,6 +13079,54 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1515847272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1515847274}
+  - component: {fileID: 1515847273}
+  m_Layer: 0
+  m_Name: GachaShopUI_BannerSelection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1515847273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515847272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26e8f04881a6b64195dbb8c6878f162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsGainedScriptableObject: {fileID: 11400000, guid: 5edeb85c09da9a7409b0d7b88c830023, type: 2}
+  shopTitle_TMP: {fileID: 1206577111}
+  summon1x_Panel: {fileID: 2001824456}
+  summon10x_Panel: {fileID: 1381203490}
+--- !u!4 &1515847274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515847272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1588850462}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1530416329
 GameObject:
   m_ObjectHideFlags: 0
@@ -13997,12 +14045,15 @@ MonoBehaviour:
   summon10x_Panel: {fileID: 1381203490}
   summon1x_Button: {fileID: 633793194}
   summon10x_Button: {fileID: 2064367267}
-  gachaSummon_ButtonScript: {fileID: 583681489}
+  itemChancesScriptableObject: []
   currencyScriptableObject: {fileID: 11400000, guid: 395c1129d054fd248a52843ad30b422c, type: 2}
-  itemsGainedScriptableObject: {fileID: 0}
+  itemsGainedScriptableObject: {fileID: 11400000, guid: 5edeb85c09da9a7409b0d7b88c830023, type: 2}
   tweenValuesScriptableObject: {fileID: 11400000, guid: c18050c1512f2954986e18f6b001a380, type: 2}
   tweenScale: 1
   tweenAnimationDelayDuration: 0.5
+  localItemNames: []
+  localItemChances: 
+  localItemImages: []
 --- !u!1 &1583900014
 GameObject:
   m_ObjectHideFlags: 0
@@ -14112,6 +14163,7 @@ Transform:
   - {fileID: 1182837133}
   - {fileID: 583681490}
   - {fileID: 1575503849}
+  - {fileID: 1515847274}
   - {fileID: 1127026092}
   - {fileID: 436322533}
   - {fileID: 59270198}
@@ -15234,20 +15286,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 583681489}
-        m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
-        m_MethodName: Selection_BannerName
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Head Banner
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 583681489}
-        m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
+      - m_Target: {fileID: 1515847273}
+        m_TargetAssemblyTypeName: BannerSelection_Button, Assembly-CSharp
         m_MethodName: Selection_BannerID
         m_Mode: 3
         m_Arguments:
@@ -15255,7 +15295,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Head Banner
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1515847273}
+        m_TargetAssemblyTypeName: BannerSelection_Button, Assembly-CSharp
+        m_MethodName: Selection_BannerName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: Head Banner
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1771680391
@@ -17209,20 +17261,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 583681489}
-        m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
-        m_MethodName: Selection_BannerName
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Misc. Banner
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 583681489}
-        m_TargetAssemblyTypeName: GachaSummon_Button, Assembly-CSharp
+      - m_Target: {fileID: 1515847273}
+        m_TargetAssemblyTypeName: BannerSelection_Button, Assembly-CSharp
         m_MethodName: Selection_BannerID
         m_Mode: 3
         m_Arguments:
@@ -17230,7 +17270,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Misc. Banner
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1515847273}
+        m_TargetAssemblyTypeName: BannerSelection_Button, Assembly-CSharp
+        m_MethodName: Selection_BannerName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: Misc Banner
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1958511071

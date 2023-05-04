@@ -4,6 +4,22 @@ using UnityEngine;
 public class ItemsGainedScriptableObject: ScriptableObject
 {
     [SerializeField]
+    private int currentlySelectedBannerID;
+
+    public int CurrentlySelectedBannerID
+    {
+        get
+        {
+            return currentlySelectedBannerID;
+        }
+        set
+        {
+            currentlySelectedBannerID = value;
+        }
+    }
+
+
+    [SerializeField]
     private bool resetGainedItemsValue;
 
     public bool ResetGainedItemsValue
@@ -17,7 +33,6 @@ public class ItemsGainedScriptableObject: ScriptableObject
             resetGainedItemsValue = value;
         }
     }
-
 
     [Header("Gained Hair items: True/False")]
     [SerializeField]

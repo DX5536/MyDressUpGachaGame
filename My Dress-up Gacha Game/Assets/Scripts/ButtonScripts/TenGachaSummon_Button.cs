@@ -20,10 +20,12 @@ public class TenGachaSummon_Button: MonoBehaviour
     [SerializeField]
     private Button summon1x_Button, summon10x_Button;
 
-    [SerializeField]
-    private GachaSummon_Button gachaSummon_ButtonScript;
+    //[SerializeField]
+    //private GachaSummon_Button gachaSummon_ButtonScript;
 
     [Header("Important Scriptable Objects")]
+    [SerializeField]
+    private ItemChancesScriptableObject[] itemChancesScriptableObject;
     [SerializeField]
     private CurrencyScriptableObject currencyScriptableObject;
     [SerializeField]
@@ -38,8 +40,18 @@ public class TenGachaSummon_Button: MonoBehaviour
     private float tweenAnimationDelayDuration;
 
     [Header("Numbers_READ ONLY!")]
+    //Local values to copy/past from SO
+    [SerializeField]
+    private string[] localItemNames;
+    [SerializeField]
+    private int[] localItemChances;
+    [SerializeField]
+    private Sprite[] localItemImages;
+
     //[SerializeField]
     private int gainedItem_Index;
+    //[SerializeField]
+    private int savedBannerIndex;
     //[SerializeField]
     private int perCent;
     private int pullCount = 10;
@@ -51,6 +63,8 @@ public class TenGachaSummon_Button: MonoBehaviour
     private void Start()
     {
         summon10x_Panel.SetActive(false);
+        UpdateLocalValuesFromSO();
+        CheckEnoughSummonTicket();
     }
 
     //public method to access in Summon! 10x button
@@ -78,6 +92,8 @@ public class TenGachaSummon_Button: MonoBehaviour
         //and summon10x_Panel is activated
         summon10x_Panel.SetActive(true);
 
+        UpdateLocalValuesFromSO();
+
         //A loop that will go through 10x times
         for (int i = 0;i < pullCount;i++)
         {
@@ -88,28 +104,28 @@ public class TenGachaSummon_Button: MonoBehaviour
             //A random number will be generate
             perCent = UnityEngine.Random.Range(0, 100);
 
-            if (perCent < gachaSummon_ButtonScript.LocalItemChances[0])
+            if (perCent < localItemChances[0])
             {
                 gainedItem_Index = 0;
             }
 
-            else if (perCent < gachaSummon_ButtonScript.LocalItemChances[0]
-                             + gachaSummon_ButtonScript.LocalItemChances[1])
+            else if (perCent < localItemChances[0]
+                             + localItemChances[1])
             {
                 gainedItem_Index = 1;
             }
 
-            else if (perCent < gachaSummon_ButtonScript.LocalItemChances[0]
-                             + gachaSummon_ButtonScript.LocalItemChances[1]
-                             + gachaSummon_ButtonScript.LocalItemChances[2])
+            else if (perCent < localItemChances[0]
+                             + localItemChances[1]
+                             + localItemChances[2])
             {
                 gainedItem_Index = 2;
             }
 
-            else if (perCent < gachaSummon_ButtonScript.LocalItemChances[0]
-                             + gachaSummon_ButtonScript.LocalItemChances[1]
-                             + gachaSummon_ButtonScript.LocalItemChances[2]
-                             + gachaSummon_ButtonScript.LocalItemChances[3])
+            else if (perCent < localItemChances[0]
+                             + localItemChances[1]
+                             + localItemChances[2]
+                             + localItemChances[3])
             {
                 gainedItem_Index = 3;
             }
@@ -123,6 +139,7 @@ public class TenGachaSummon_Button: MonoBehaviour
 
             //The item will be displayed on the according slot [i]
             BannerDisplayItem(i);
+
 
         }
 
@@ -145,6 +162,9 @@ public class TenGachaSummon_Button: MonoBehaviour
         //and summon10x_Panel is activated
         summon10x_Panel.SetActive(true);
 
+        //We need to updated the localItems that are temporary save in 1xPull scripts
+        //So we will just call upon this script
+
         //A loop that will go through 10x times
         for (int i = 0;i < pullCount;i++)
         {
@@ -152,31 +172,33 @@ public class TenGachaSummon_Button: MonoBehaviour
             summon1x_Button.interactable = false;
             summon10x_Button.interactable = false;
 
+            UpdateLocalValuesFromSO();
+
             //A random number will be generate
             perCent = UnityEngine.Random.Range(0, 100);
 
-            if (perCent < gachaSummon_ButtonScript.LocalItemChances[0])
+            if (perCent < localItemChances[0])
             {
                 gainedItem_Index = 0;
             }
 
-            else if (perCent < gachaSummon_ButtonScript.LocalItemChances[0]
-                             + gachaSummon_ButtonScript.LocalItemChances[1])
+            else if (perCent < localItemChances[0]
+                             + localItemChances[1])
             {
                 gainedItem_Index = 1;
             }
 
-            else if (perCent < gachaSummon_ButtonScript.LocalItemChances[0]
-                             + gachaSummon_ButtonScript.LocalItemChances[1]
-                             + gachaSummon_ButtonScript.LocalItemChances[2])
+            else if (perCent < localItemChances[0]
+                             + localItemChances[1]
+                             + localItemChances[2])
             {
                 gainedItem_Index = 2;
             }
 
-            else if (perCent < gachaSummon_ButtonScript.LocalItemChances[0]
-                             + gachaSummon_ButtonScript.LocalItemChances[1]
-                             + gachaSummon_ButtonScript.LocalItemChances[2]
-                             + gachaSummon_ButtonScript.LocalItemChances[3])
+            else if (perCent < localItemChances[0]
+                             + localItemChances[1]
+                             + localItemChances[2]
+                             + localItemChances[3])
             {
                 gainedItem_Index = 3;
             }
@@ -202,6 +224,22 @@ public class TenGachaSummon_Button: MonoBehaviour
         summon10x_Button.interactable = true;
     }
 
+    private void CopyPasteSOValuesToLocalValues(int chosenBannerIndex)
+    {
+        //Make sure array index is same length as SO (human = dumb) -> Length[] is the same anyway
+        localItemNames = new string[itemChancesScriptableObject[chosenBannerIndex].ItemChances.Length];
+        localItemChances = new int[itemChancesScriptableObject[chosenBannerIndex].ItemChances.Length];
+        localItemImages = new Sprite[itemChancesScriptableObject[chosenBannerIndex].ItemChances.Length];
+
+        //Auto copy/paste
+        for (int i = 0;i < itemChancesScriptableObject[chosenBannerIndex].ItemChances.Length;i++)
+        {
+            localItemNames[i] = itemChancesScriptableObject[chosenBannerIndex].ItemNames[i];
+            localItemChances[i] = itemChancesScriptableObject[chosenBannerIndex].ItemChances[i];
+            localItemImages[i] = itemChancesScriptableObject[chosenBannerIndex].ItemImages[i];
+        }
+    }
+
     //This will display the gained item (text + sprites) on the UI
     //I have to make a parameter as this will feed into SummonLogic
     //By making them dependent -> We know where something fail
@@ -214,32 +252,32 @@ public class TenGachaSummon_Button: MonoBehaviour
         switch (gainedItem_Index)
         {
             case 0:
-                gainedItem10x_TMP[bannerDisplayItem_Index].text = gachaSummon_ButtonScript.LocalItemNames[0];
-                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = gachaSummon_ButtonScript.LocalItemImages[0];
+                gainedItem10x_TMP[bannerDisplayItem_Index].text = localItemNames[0];
+                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = localItemImages[0];
 
                 SavedDisplayItem(0);
                 break;
             case 1:
-                gainedItem10x_TMP[bannerDisplayItem_Index].text = gachaSummon_ButtonScript.LocalItemNames[1];
-                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = gachaSummon_ButtonScript.LocalItemImages[1];
+                gainedItem10x_TMP[bannerDisplayItem_Index].text = localItemNames[1];
+                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = localItemImages[1];
 
                 SavedDisplayItem(1);
                 break;
             case 2:
-                gainedItem10x_TMP[bannerDisplayItem_Index].text = gachaSummon_ButtonScript.LocalItemNames[2];
-                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = gachaSummon_ButtonScript.LocalItemImages[2];
+                gainedItem10x_TMP[bannerDisplayItem_Index].text = localItemNames[2];
+                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = localItemImages[2];
 
                 SavedDisplayItem(2);
                 break;
             case 3:
-                gainedItem10x_TMP[bannerDisplayItem_Index].text = gachaSummon_ButtonScript.LocalItemNames[3];
-                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = gachaSummon_ButtonScript.LocalItemImages[3];
+                gainedItem10x_TMP[bannerDisplayItem_Index].text = localItemNames[3];
+                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = localItemImages[3];
 
                 SavedDisplayItem(3);
                 break;
             case 4:
-                gainedItem10x_TMP[bannerDisplayItem_Index].text = gachaSummon_ButtonScript.LocalItemNames[4];
-                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = gachaSummon_ButtonScript.LocalItemImages[4];
+                gainedItem10x_TMP[bannerDisplayItem_Index].text = localItemNames[4];
+                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = localItemImages[4];
 
                 SavedDisplayItem(4);
                 break;
@@ -248,11 +286,17 @@ public class TenGachaSummon_Button: MonoBehaviour
         //Debug.Log("Display gainedItem10x_TMP/IMG at index " + bannerDisplayItem_Index);
     }
 
+    private void UpdateLocalValuesFromSO()
+    {
+        savedBannerIndex = itemsGainedScriptableObject.CurrentlySelectedBannerID;
+        CopyPasteSOValuesToLocalValues(savedBannerIndex);
+    }
+
     //This method will mark the gained item on which banner, based on chosenBannerIndex, to "HasGained"
     //For saving purposes and to display in Inventory (button being interactable -> equip item)
     private void SavedDisplayItem(int saveGainedItemID)
     {
-        switch (gachaSummon_ButtonScript.SavedBannerIndex)
+        switch (savedBannerIndex)
         {
             case 0:
                 if (!itemsGainedScriptableObject.HasGainedHairItems[saveGainedItemID])
@@ -311,7 +355,6 @@ public class TenGachaSummon_Button: MonoBehaviour
                 break;
         }
     }
-
 
     //public to access from GachaShop Button
     //Else there is a bug that disable button, despite go out and buy more from In-App Shop

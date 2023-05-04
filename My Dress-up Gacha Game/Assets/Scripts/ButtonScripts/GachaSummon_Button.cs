@@ -38,12 +38,6 @@ public class GachaSummon_Button: MonoBehaviour
     [SerializeField]
     private float tweenScale;
 
-    //[Header("This is so we can start with something and not placeholder text")]
-    //[SerializeField]
-    private string startBannerTitleName = "Hair Banner";
-    //[SerializeField]
-    private int startBannerIndex = 0;
-
     [Header("Numbers_READ ONLY!")]
     [SerializeField]
     private int gainedItem_Index;
@@ -59,28 +53,8 @@ public class GachaSummon_Button: MonoBehaviour
     private Sprite[] localItemImages;
 
     //This value is to do an internal selection of which banner to pull from
+    //[SerializeField]
     private int savedBannerIndex;
-
-    public int SavedBannerIndex
-    {
-        get => savedBannerIndex;
-        set => savedBannerIndex = value;
-    }
-    public string[] LocalItemNames
-    {
-        get => localItemNames;
-        set => localItemNames = value;
-    }
-    public int[] LocalItemChances
-    {
-        get => localItemChances;
-        set => localItemChances = value;
-    }
-    public Sprite[] LocalItemImages
-    {
-        get => localItemImages;
-        set => localItemImages = value;
-    }
 
     private void OnEnable()
     {
@@ -100,43 +74,12 @@ public class GachaSummon_Button: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //At start we disable the component
-        //Only visible upon click Summon! button
-        EnableGainedItemUI(false);
-
-        //At start we will auto default the bannerName to "Hair" and bannerID to 0
-        shopTitle_TMP.text = startBannerTitleName;
-        savedBannerIndex = startBannerIndex;
-
         summon1x_Panel.SetActive(false);
 
         //At start we copy/pasts 0. itemChance_SO's value to localItem
-        CopyPasteSOValuesToLocalValues(0);
+        UpdateLocalValuesFromSO();
         CheckEnoughSummonTicket();
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    //public to access from Banner selection button
-    public void Selection_BannerName(string bannerName)
-    {
-        //Change the PanelTitle to the name
-        shopTitle_TMP.text = bannerName;
-
-        //Deactivated previously gainedItem UI upon changing banner
-        EnableGainedItemUI(false);
-    }
-
-    //public because Unity is a b- for only allow 1 parameter in a button ;_;
-    public void Selection_BannerID(int bannerID)
-    {
-        //Save the ID of the banner locally so we know which item to be summoned
-        savedBannerIndex = bannerID;
     }
 
     //public method to access in Summon! button
@@ -146,6 +89,8 @@ public class GachaSummon_Button: MonoBehaviour
         summon10x_Panel.SetActive(false);
         //and summon1x_Panel is activated
         summon1x_Panel.SetActive(true);
+
+        UpdateLocalValuesFromSO();
 
         //A random number will be generate
         perCent = UnityEngine.Random.Range(0, 100);
@@ -182,7 +127,6 @@ public class GachaSummon_Button: MonoBehaviour
         }
 
         ExecuteSelectedBanner();
-        EnableGainedItemUI(true);
 
         //Reduce SummonTicketAmount in SO by 1 after summoning
         currencyScriptableObject.SummonTicketAmount -= 1;
@@ -191,15 +135,22 @@ public class GachaSummon_Button: MonoBehaviour
         CheckEnoughSummonTicket();
     }
 
+    private void UpdateLocalValuesFromSO()
+    {
+        savedBannerIndex = itemsGainedScriptableObject.CurrentlySelectedBannerID;
+        CopyPasteSOValuesToLocalValues(savedBannerIndex);
+    }
+
     private void ExecuteSelectedBanner()
     {
-        CopyPasteSOValuesToLocalValues(savedBannerIndex);
         BannerDisplayItem();
+        EnableGainedItemUI(true);
     }
 
     //This method is all about copy & paste values from SO to local Var
     //This allow for less typing error + faster typing
-    private void CopyPasteSOValuesToLocalValues(int chosenBannerIndex)
+    //public method so we can access from TenPulls -> Else banner is not updated upon clicking 10x Summon
+    public void CopyPasteSOValuesToLocalValues(int chosenBannerIndex)
     {
         //Make sure array index is same length as SO (human = dumb) -> Length[] is the same anyway
         localItemNames = new string[itemChancesScriptableObject[chosenBannerIndex].ItemChances.Length];

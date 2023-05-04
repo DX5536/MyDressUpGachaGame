@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8885c9fbdba4440bdfbc1b9d374fed, type: 3}
   m_Name: 04_MiscChances_SO
   m_EditorClassIdentifier: 
-  bannerItemIndex: 1
+  bannerItemIndex: 4
   itemNames:
   - Halo
   - Chair

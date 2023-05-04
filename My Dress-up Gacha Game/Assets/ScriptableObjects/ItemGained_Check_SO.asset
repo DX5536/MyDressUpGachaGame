@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506fd1758fe1a8b4e91cdb41c29d7d40, type: 3}
   m_Name: ItemGained_Check_SO
   m_EditorClassIdentifier: 
-  resetGainedItemsValue: 0
-  hasGainedHairItems: 01000000
+  resetGainedItemsValue: 1
+  hasGainedHairItems: 00000000
   hasGainedHeadItems: 00000000
-  hasGainedTorsoItems: 00000000
+  hasGainedTorsoItems: 01010101
   hasGainedLegItems: 00000000
   hasGainedMiscItems: 00000000
