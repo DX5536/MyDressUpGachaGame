@@ -18,6 +18,22 @@ public class ItemsGainedScriptableObject: ScriptableObject
         }
     }
 
+    [SerializeField]
+    private int currentlyDisplayedPartInventoryID;
+
+    public int CurrentlyDisplayedPartInventoryID
+    {
+        get
+        {
+            return currentlyDisplayedPartInventoryID;
+        }
+        set
+        {
+            currentlyDisplayedPartInventoryID = value;
+        }
+    }
+
+
 
     [SerializeField]
     private bool resetGainedItemsValue;
