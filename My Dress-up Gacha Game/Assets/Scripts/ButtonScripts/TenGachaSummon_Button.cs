@@ -20,6 +20,9 @@ public class TenGachaSummon_Button: MonoBehaviour
     [SerializeField]
     private Button summon1x_Button, summon10x_Button;
 
+    [SerializeField]
+    private Toggle skipAnimation_Toggle;
+
     //[SerializeField]
     //private GachaSummon_Button gachaSummon_ButtonScript;
 
@@ -48,6 +51,7 @@ public class TenGachaSummon_Button: MonoBehaviour
     [SerializeField]
     private Sprite[] localItemImages;
 
+    private bool skipAnimation;
     //[SerializeField]
     private int gainedItem_Index;
     //[SerializeField]
@@ -65,15 +69,31 @@ public class TenGachaSummon_Button: MonoBehaviour
         summon10x_Panel.SetActive(false);
         UpdateLocalValuesFromSO();
         CheckEnoughSummonTicket();
+
+        skipAnimationToggling();
+    }
+
+    public void skipAnimationToggling()
+    {
+        if (skipAnimation_Toggle.isOn)
+        {
+            skipAnimation = true;
+        }
+
+        else
+        {
+            skipAnimation = false;
+        }
     }
 
     //public method to access in Summon! 10x button
     public void SummonLogic_With_WithoutDelay(bool withDelay)
     {
         youGain_TMP.enabled = true;
+        //withDelay = skipAnimation;
 
         //Delay will make each summoned item pop up 1-by-1 (not knowing what is the next item)
-        if (withDelay)
+        if (!skipAnimation)
         {
             DisablePlaceholderSlotIn10xPanel();
             StartCoroutine(SummonLogicWithDelay());
