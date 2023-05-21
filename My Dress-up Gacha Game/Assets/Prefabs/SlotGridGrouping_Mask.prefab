@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 258828000077305898}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: miscItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 3357303428961074698}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: hairItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1439,7 +1439,7 @@ GameObject:
   - component: {fileID: 1893958394253714875}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: hairItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2380,7 +2380,7 @@ GameObject:
   - component: {fileID: 9177360431436290028}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: headItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3807,7 +3807,7 @@ GameObject:
   - component: {fileID: 7601711397010185616}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: headItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5110,7 +5110,7 @@ GameObject:
   - component: {fileID: 8652405902321515290}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: legItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5877,7 +5877,7 @@ GameObject:
   - component: {fileID: 1247388860402939997}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: headItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6507,7 +6507,7 @@ GameObject:
   - component: {fileID: 3198175078475762721}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: headItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7031,7 +7031,7 @@ GameObject:
   - component: {fileID: 8758876103794191378}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: legItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7124,7 +7124,7 @@ GameObject:
   - component: {fileID: 3911556941626867707}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: legItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8969,7 +8969,7 @@ GameObject:
   - component: {fileID: 1230765394168066889}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: hairItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9062,7 +9062,7 @@ GameObject:
   - component: {fileID: 7168397634170294464}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: torsoItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9440,7 +9440,7 @@ GameObject:
   - component: {fileID: 379578000272898344}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: torsoItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9533,7 +9533,7 @@ GameObject:
   - component: {fileID: 8378170326580266902}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: miscItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11103,7 +11103,7 @@ GameObject:
   - component: {fileID: 2615949287885206333}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: miscItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11467,7 +11467,7 @@ GameObject:
   - component: {fileID: 2222375338385075629}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: legItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12023,7 +12023,7 @@ GameObject:
   - component: {fileID: 3521840762065405278}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: miscItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12773,7 +12773,7 @@ GameObject:
   - component: {fileID: 5238778169682776264}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: legItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14452,7 +14452,7 @@ GameObject:
   - component: {fileID: 4349848915242486421}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: hairItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15389,7 +15389,7 @@ GameObject:
   - component: {fileID: 8967845302861598608}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: legItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15576,7 +15576,7 @@ GameObject:
   - component: {fileID: 111117515817960793}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: headItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17514,7 +17514,7 @@ GameObject:
   - component: {fileID: 6525097359992700782}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: miscItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17780,7 +17780,7 @@ GameObject:
   - component: {fileID: 3026586967103894655}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: torsoItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19352,7 +19352,7 @@ GameObject:
   - component: {fileID: 1299410403740619575}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: torsoItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19543,7 +19543,7 @@ GameObject:
   - component: {fileID: 5025052191261326687}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: torsoItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19722,7 +19722,7 @@ GameObject:
   - component: {fileID: 4396933981656065770}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: torsoItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20725,7 +20725,7 @@ GameObject:
   - component: {fileID: 781796670799864338}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: miscItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21229,7 +21229,7 @@ GameObject:
   - component: {fileID: 2484553672956948979}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: hairItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23082,7 +23082,7 @@ GameObject:
   - component: {fileID: 784024407200970413}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: headItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23698,7 +23698,7 @@ GameObject:
   - component: {fileID: 6045581984027921701}
   m_Layer: 5
   m_Name: Item_IMG
-  m_TagString: Untagged
+  m_TagString: hairItemIMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

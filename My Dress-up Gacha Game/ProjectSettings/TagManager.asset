@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - hairItemIMG
+  - headItemIMG
+  - torsoItemIMG
+  - legItemIMG
+  - miscItemIMG
   layers:
   - Default
   - TransparentFX
