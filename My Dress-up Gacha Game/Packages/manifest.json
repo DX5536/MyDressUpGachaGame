@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.coffee.softmask-for-ugui": "https://github.com/mob-sakai/SoftMaskForUGUI.git",
     "com.febucci.custom-hierarchy": "https://github.com/febucci/unitypackage-custom-hierarchy.git",
     "com.kelvip.quick-scene-switcher": "https://github.com/Kelvin-CD/Quick-Scene-Switcher.git#upm",
     "com.unity.cinemachine": "2.8.9",
