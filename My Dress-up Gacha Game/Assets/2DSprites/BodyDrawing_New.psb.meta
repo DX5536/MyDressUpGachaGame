@@ -11,7 +11,7 @@ ScriptedImporter:
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     fadeOut: 0
     borderMipMap: 1
     mipMapsPreserveCoverage: 0
@@ -21,7 +21,7 @@ ScriptedImporter:
     convertToNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    isReadable: 1
+    isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
     vTOnly: 0
@@ -33,7 +33,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 2
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -90,6 +90,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: WolfCut_1
@@ -112,7 +113,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1474, y: 3107}
+    uvTransform: {x: 2263, y: 5829}
+    spritePosition: {x: 789, y: 2722}
   - name: SweepBack_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -133,7 +135,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -770, y: 5031}
+    uvTransform: {x: 4, y: 7488}
+    spritePosition: {x: 774, y: 2457}
   - name: GenericHair_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -154,7 +157,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1044, y: 2198}
+    uvTransform: {x: 1864, y: 4923}
+    spritePosition: {x: 820, y: 2725}
   - name: ShortHair_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -175,7 +179,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1065, y: 969}
+    uvTransform: {x: 1864, y: 3601}
+    spritePosition: {x: 799, y: 2632}
   - name: HimeCut_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -196,7 +201,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1008, y: 3110}
+    uvTransform: {x: 1844, y: 5470}
+    spritePosition: {x: 836, y: 2360}
   - name: SplitCurly_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -217,7 +223,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 282, y: 5131}
+    uvTransform: {x: 1057, y: 7332}
+    spritePosition: {x: 775, y: 2201}
   - name: Necklace
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -238,7 +245,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1817, y: 2250}
+    uvTransform: {x: 2724, y: 4584}
+    spritePosition: {x: 907, y: 2334}
   - name: Sunglasses
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -259,7 +267,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1852, y: 2163}
+    uvTransform: {x: 2724, y: 4922}
+    spritePosition: {x: 872, y: 2759}
   - name: Glasses
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -280,7 +289,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1852, y: 2245}
+    uvTransform: {x: 2724, y: 5011}
+    spritePosition: {x: 872, y: 2766}
   - name: TurtleneckJacket
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -301,7 +311,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 707, y: -989}
+    uvTransform: {x: 1057, y: 4}
+    spritePosition: {x: 350, y: 993}
   - name: 1PieceDress
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -322,7 +333,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1533, y: 1010}
+    uvTransform: {x: 2263, y: 1722}
+    spritePosition: {x: 730, y: 712}
   - name: Swimsuit
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -343,7 +355,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 753, y: 5361}
+    uvTransform: {x: 1484, y: 7332}
+    spritePosition: {x: 731, y: 1971}
   - name: SportBra
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -364,7 +377,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -281, y: 5289}
+    uvTransform: {x: 449, y: 7488}
+    spritePosition: {x: 730, y: 2199}
   - name: UnbuttonShirt
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -385,7 +399,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2550, y: -1655}
+    uvTransform: {x: 3000, y: 4}
+    spritePosition: {x: 450, y: 1659}
   - name: TShirt
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -406,7 +421,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2390, y: -651}
+    uvTransform: {x: 3000, y: 1072}
+    spritePosition: {x: 610, y: 1723}
   - name: MiniSkirt
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -427,7 +443,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 458, y: 3577}
+    uvTransform: {x: 1057, y: 3601}
+    spritePosition: {x: 599, y: 24}
   - name: BaggyPant
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -448,7 +465,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -625, y: 5532}
+    uvTransform: {x: 4, y: 5586}
+    spritePosition: {x: 629, y: 54}
   - name: ShortWithStrap
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -469,7 +487,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 445, y: 1635}
+    uvTransform: {x: 1057, y: 1675}
+    spritePosition: {x: 612, y: 40}
   - name: SportBoxer
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -490,7 +509,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1603, y: -161}
+    uvTransform: {x: 2263, y: 4}
+    spritePosition: {x: 660, y: 165}
   - name: Swimsuit
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -511,7 +531,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1635, y: 3994}
+    uvTransform: {x: 2263, y: 5552}
+    spritePosition: {x: 628, y: 1558}
   - name: Jeans
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -532,7 +553,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 430, y: 5424}
+    uvTransform: {x: 1057, y: 5470}
+    spritePosition: {x: 627, y: 46}
   - name: BellyPiercing
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -553,7 +575,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1027, y: 2676}
+    uvTransform: {x: 1864, y: 4474}
+    spritePosition: {x: 837, y: 1798}
   - name: MuscleLine
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -574,7 +597,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1023, y: 2227}
+    uvTransform: {x: 1864, y: 4010}
+    spritePosition: {x: 841, y: 1783}
   - name: Scars
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -595,7 +619,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -428, y: 2616}
+    uvTransform: {x: 4, y: 2985}
+    spritePosition: {x: 432, y: 369}
   - name: Body
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -616,7 +641,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -420, y: -73}
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 424, y: 77}
   - name: WolfCut
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -637,7 +663,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1473, y: 2578}
+    uvTransform: {x: 2263, y: 5074}
+    spritePosition: {x: 790, y: 2496}
   - name: HimeCut
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -658,7 +685,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 991, y: 3830}
+    uvTransform: {x: 1844, y: 6146}
+    spritePosition: {x: 853, y: 2316}
   - name: SplitCurly
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -679,7 +707,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1518, y: 1750}
+    uvTransform: {x: 2263, y: 3672}
+    spritePosition: {x: 745, y: 1922}
   - name: SweepBack
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -700,7 +729,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1519, y: 2174}
+    uvTransform: {x: 2263, y: 4584}
+    spritePosition: {x: 744, y: 2410}
   - name: GenericHair
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -721,7 +751,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1021, y: 4228}
+    uvTransform: {x: 1844, y: 6745}
+    spritePosition: {x: 823, y: 2517}
   characterData:
     bones: []
     parts: []
@@ -738,10 +769,10 @@ ScriptedImporter:
   platformSettings:
   - name: DefaultTexturePlatform
     overridden: 0
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
