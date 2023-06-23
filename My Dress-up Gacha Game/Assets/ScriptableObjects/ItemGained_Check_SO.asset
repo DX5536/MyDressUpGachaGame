@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506fd1758fe1a8b4e91cdb41c29d7d40, type: 3}
   m_Name: ItemGained_Check_SO
   m_EditorClassIdentifier: 
-  currentlySelectedBannerID: 2
+  currentlySelectedBannerID: 0
+  currentlyDisplayedPartInventoryID: 0
   resetGainedItemsValue: 1
-  hasGainedHairItems: 01010000
-  hasGainedHeadItems: 01010100
-  hasGainedTorsoItems: 01010001
-  hasGainedLegItems: 00000000
-  hasGainedMiscItems: 00000000
+  hasGainedHairItems: 010101010100
+  hasGainedHeadItems: 000000000000
+  hasGainedTorsoItems: 000000000000
+  hasGainedLegItems: 000000000000
+  hasGainedMiscItems: 000000000000

@@ -14,13 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bannerItemIndex: 0
   itemNames:
-  - Long Hair
-  - Ponytail
+  - Normal Hair
+  - Hime Cut
+  - Long Curly
+  - Wolfcut
+  - Sweep Back
   - Short Hair
-  - Braid
-  itemChances: 46000000140000000700000003000000
+  itemChances: 32000000140000000f0000000a0000000400000001000000
   itemImages:
-  - {fileID: 21300000, guid: 928c544e35a15fb4ca4c5523ac578bdf, type: 3}
-  - {fileID: 21300000, guid: 5d698c217e94c64428ab24b80256959b, type: 3}
-  - {fileID: 21300000, guid: 76439d78e0dfebc45ae0b0a1d81dae75, type: 3}
-  - {fileID: 21300000, guid: 74373303c5e12a74687063ba5f9f1e59, type: 3}
+  - {fileID: 21300000, guid: 0d6cc3d44fb744545be222027216ff9d, type: 3}
+  - {fileID: 21300000, guid: 052e0053ad4576f4eaf9b3bbc68b3237, type: 3}
+  - {fileID: 21300000, guid: 651f0963a1facac4697763471b12f6ac, type: 3}
+  - {fileID: 21300000, guid: 21af45f475c3e7c40a80523e09600c4b, type: 3}
+  - {fileID: 21300000, guid: 6341f6769620edc468bd6edeefccd7ff, type: 3}
+  - {fileID: 21300000, guid: e65c9d9361ab3114493a44e0b331e11b, type: 3}
