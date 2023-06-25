@@ -4,9 +4,12 @@ using UnityEngine;
 public class InventoryTabZoom_Button: MonoBehaviour
 {
     [SerializeField]
-    private RectTransform baseBody;
+    private RectTransform bodyDrawing;
     [SerializeField]
     private RectTransform startingPosGO;
+
+    [SerializeField]
+    private float startingScaleValue;
 
     [Header("Tween values")]
     [SerializeField]
@@ -30,9 +33,11 @@ public class InventoryTabZoom_Button: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Human are dumb so I added this in case I change my mind where the baseBody should start
+        //Human are dumb so I added this in case I change my mind where the bodyDrawing should start
         //startingPosGO will auto spawn at that point => Safety net
-        startingPosGO.transform.position = baseBody.position;
+        startingPosGO.transform.position = bodyDrawing.position;
+
+        startingScaleValue = bodyDrawing.transform.localScale.x;
     }
 
     // Update is called once per frame
@@ -45,50 +50,50 @@ public class InventoryTabZoom_Button: MonoBehaviour
     //and reset View -> Unlike ZoomOut, this is immediately 
     public void ResetZoom()
     {
-        baseBody.DOMove(startingPosGO.transform.position,
+        bodyDrawing.DOMove(startingPosGO.transform.position,
                         0,
                         tweenValuesScriptableObject.TweenSnapping);
-        baseBody.DOScale(1, 0);
+        bodyDrawing.DOScale(startingScaleValue, 0);
     }
 
     public void Hair_ZoomIn()
     {
-        baseBody.DOMove(tweenHairGoal_GO.transform.position,
+        bodyDrawing.DOMove(tweenHairGoal_GO.transform.position,
                         tweenValuesScriptableObject.TweenDuration,
                         tweenValuesScriptableObject.TweenSnapping);
-        baseBody.DOScale(hairScaleAmount, tweenValuesScriptableObject.TweenSpeed);
+        bodyDrawing.DOScale(startingScaleValue * hairScaleAmount, tweenValuesScriptableObject.TweenSpeed);
     }
 
     public void Head_ZoomIn()
     {
-        baseBody.DOMove(tweenHeadGoal_GO.transform.position,
+        bodyDrawing.DOMove(tweenHeadGoal_GO.transform.position,
                         tweenValuesScriptableObject.TweenDuration,
                         tweenValuesScriptableObject.TweenSnapping);
-        baseBody.DOScale(headScaleAmount, tweenValuesScriptableObject.TweenSpeed);
+        bodyDrawing.DOScale(startingScaleValue * headScaleAmount, tweenValuesScriptableObject.TweenSpeed);
     }
 
     public void Torso_ZoomIn()
     {
-        baseBody.DOMove(tweenTorsoGoal_GO.transform.position,
+        bodyDrawing.DOMove(tweenTorsoGoal_GO.transform.position,
                         tweenValuesScriptableObject.TweenDuration,
                         tweenValuesScriptableObject.TweenSnapping);
-        baseBody.DOScale(torsoScaleAmount, tweenValuesScriptableObject.TweenSpeed);
+        bodyDrawing.DOScale(startingScaleValue * torsoScaleAmount, tweenValuesScriptableObject.TweenSpeed);
 
     }
 
     public void Legs_ZoomIn()
     {
-        baseBody.DOMove(tweenLegsGoal_GO.transform.position,
+        bodyDrawing.DOMove(tweenLegsGoal_GO.transform.position,
                         tweenValuesScriptableObject.TweenDuration,
                         tweenValuesScriptableObject.TweenSnapping);
-        baseBody.DOScale(legsScaleAmount, tweenValuesScriptableObject.TweenSpeed);
+        bodyDrawing.DOScale(startingScaleValue * legsScaleAmount, tweenValuesScriptableObject.TweenSpeed);
     }
 
     public void FullBody_ZoomOut()
     {
-        baseBody.DOMove(startingPosGO.transform.position,
+        bodyDrawing.DOMove(startingPosGO.transform.position,
                         tweenValuesScriptableObject.TweenDuration,
                         tweenValuesScriptableObject.TweenSnapping);
-        baseBody.DOScale(1, tweenValuesScriptableObject.TweenSpeed);
+        bodyDrawing.DOScale(startingScaleValue, tweenValuesScriptableObject.TweenSpeed);
     }
 }
