@@ -11,7 +11,7 @@ public class SummonTicketCheckAndDisplay: MonoBehaviour
 
     void Start()
     {
-        DisplaySummonTicket();
+        DisplaySummonTicket(false);
     }
 
     // Update is called once per frame
@@ -21,12 +21,19 @@ public class SummonTicketCheckAndDisplay: MonoBehaviour
     }
 
     //public to access Summon! button
-    public void DisplaySummonTicket()
+    public void DisplaySummonTicket(bool is10xSummon)
     {
-        //Save values from SO to a local Variable 
-        var localTicketAmount = currencyScriptableObject.SummonTicketAmount;
-        //Start with pasting whatever amount of summonTicket in SO in UI
-        ticketAmount_TMP.text = localTicketAmount.ToString();
+        if (is10xSummon)
+        {
+            Debug.Log("SummonTicketCheckAndDisplay in 10x");
+        }
+
+        else
+        {
+            //Start with pasting whatever amount of summonTicket in SO in UI
+            ticketAmount_TMP.text = currencyScriptableObject.SummonTicketAmount.ToString();
+        }
+
         TicketOrTickets();
     }
 

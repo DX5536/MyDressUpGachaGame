@@ -80,6 +80,7 @@ public class InAppShop: MonoBehaviour
         totalMoneyAmount_TMP.text = localMoneyAmount.ToString() + "€";
     }
 
+
     //Start the Coroutine/Tween of Ticket
     private void AddTickets(int addTicketAmount)
     {
@@ -133,6 +134,7 @@ public class InAppShop: MonoBehaviour
             yield return null;
         }
     }
+
 
 
 }
