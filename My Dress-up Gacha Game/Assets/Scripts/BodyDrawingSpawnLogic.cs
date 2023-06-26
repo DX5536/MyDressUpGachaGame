@@ -9,6 +9,9 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
     [SerializeField]
     private RectTransform bodyDrawing;
 
+    [SerializeField]
+    private float scaleValue;
+
     [Header("Starting position")]
     [SerializeField]
     private RectTransform mainScreen_StartingBodyDrawingPos;
@@ -19,6 +22,9 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        scaleValue = bodyDrawing.transform.localScale.x;
+        mainScreen_StartingBodyDrawingPos.transform.position = bodyDrawing.transform.position;
+
         //Make sure BodyDrawing is always active at start
         //if not -> set it active
         RepositionBodyDrawing_MainScreen();
@@ -33,21 +39,26 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
     //Public to access from any Close button in any screen
     public void RepositionBodyDrawing_MainScreen()
     {
+        bodyDrawing.gameObject.SetActive(true);
         bodyDrawing.transform.position = mainScreen_StartingBodyDrawingPos.transform.position;
+        bodyDrawing.transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
 
         //if GO is not active make it active
-        if (!bodyDrawing.gameObject.activeSelf)
+        /*if (!bodyDrawing.gameObject.activeSelf)
         {
-            bodyDrawing.gameObject.SetActive(true);
+            //bodyDrawing.gameObject.SetActive(true);
             //bodyDrawing.transform.position = mainScreen_StartingBodyDrawingPos.transform.position;
+            Debug.Log("BodyDrawing is inactive.");
         }
 
         else
         {
-            Debug.Log("BodyDrawing is already active");
-        }
+            //bodyDrawing.gameObject.SetActive(true);
+            //bodyDrawing.transform.position = mainScreen_StartingBodyDrawingPos.transform.position;
+            Debug.Log("BodyDrawing is already active.");
+        }*/
 
-        Debug.Log("Reposition in Main Menu");
+
     }
 
     //Public to access from InventoryButton in MainScreen

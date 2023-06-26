@@ -1076,7 +1076,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 241268529}
   - {fileID: 2687447010504771161}
   m_Father: {fileID: 995998072}
   m_RootOrder: 0
@@ -1152,12 +1151,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 232072611}
-  m_RootOrder: 0
+  m_Father: {fileID: 995998072}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -366.4101, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &247412217
@@ -7580,6 +7579,7 @@ RectTransform:
   - {fileID: 974561205}
   - {fileID: 2108467921}
   - {fileID: 953080694}
+  - {fileID: 241268529}
   - {fileID: 1966972850}
   - {fileID: 1303839509}
   m_Father: {fileID: 7143830724178165213}
@@ -7993,9 +7993,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 318107210}
-        m_TargetAssemblyTypeName: InventoryTabZoom_Button, Assembly-CSharp
-        m_MethodName: ResetZoom
+      - m_Target: {fileID: 1701677089}
+        m_TargetAssemblyTypeName: BodyDrawingSpawnLogic, Assembly-CSharp
+        m_MethodName: RepositionBodyDrawing_MainScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8008,18 +8008,6 @@ MonoBehaviour:
       - m_Target: {fileID: 525756219}
         m_TargetAssemblyTypeName: OpenSpecificWindow, Assembly-CSharp
         m_MethodName: ChangeWindowStatus
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1701677089}
-        m_TargetAssemblyTypeName: BodyDrawingSpawnLogic, Assembly-CSharp
-        m_MethodName: RepositionBodyDrawing_MainScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9536,7 +9524,7 @@ RectTransform:
   m_Children:
   - {fileID: 602934435}
   m_Father: {fileID: 995998072}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -12056,6 +12044,7 @@ MonoBehaviour:
   gachaShop_Panel: {fileID: 981471223}
   inApp_Panel: {fileID: 1852659400}
   bodyDrawing: {fileID: 2687447010504771161}
+  scaleValue: 0
   mainScreen_StartingBodyDrawingPos: {fileID: 241268529}
   inventory_StartingBodyDrawingPos: {fileID: 586610363}
 --- !u!1 &1711591009
@@ -14401,7 +14390,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 995998072}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15939,7 +15928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3277415971259754688, guid: 91827471f1a68e74d94ba08ebaecc902, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3277415971259754688, guid: 91827471f1a68e74d94ba08ebaecc902, type: 3}
       propertyPath: m_AnchoredPosition.y
