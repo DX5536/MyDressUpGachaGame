@@ -35,7 +35,9 @@ public class InventoryTabZoom_Button: MonoBehaviour
     {
         //Human are dumb so I added this in case I change my mind where the bodyDrawing should start
         //startingPosGO will auto spawn at that point => Safety net
-        startingPosGO.transform.position = bodyDrawing.position;
+        //NOW OBSOLETE as we only use 1 BodyDrawing from MainMenu aka a different StartingPosition
+
+        //startingPosGO.transform.position = bodyDrawing.position;
 
         startingScaleValue = bodyDrawing.transform.localScale.x;
     }

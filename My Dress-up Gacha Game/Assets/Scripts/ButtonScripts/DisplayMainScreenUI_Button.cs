@@ -35,7 +35,7 @@ public class DisplayMainScreenUI_Button: MonoBehaviour
         showUI_Button.gameObject.SetActive(false);
 
         startingMainScreenPosition.position = mainScreenUI_Panel.position;
-        startingBodyDrawingPosition.position = bodyDrawing.position;
+        //startingBodyDrawingPosition.position = bodyDrawing.position;
     }
 
     // Update is called once per frame

@@ -19,7 +19,9 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //Make sure BodyDrawing is always active at start
+        //if not -> set it active
+        RepositionBodyDrawing_MainScreen();
     }
 
     // Update is called once per frame
@@ -31,10 +33,13 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
     //Public to access from any Close button in any screen
     public void RepositionBodyDrawing_MainScreen()
     {
+        bodyDrawing.transform.position = mainScreen_StartingBodyDrawingPos.transform.position;
+
         //if GO is not active make it active
         if (!bodyDrawing.gameObject.activeSelf)
         {
             bodyDrawing.gameObject.SetActive(true);
+            //bodyDrawing.transform.position = mainScreen_StartingBodyDrawingPos.transform.position;
         }
 
         else
@@ -42,16 +47,14 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
             Debug.Log("BodyDrawing is already active");
         }
 
-        bodyDrawing.transform.position = mainScreen_StartingBodyDrawingPos.position;
+        Debug.Log("Reposition in Main Menu");
     }
 
     //Public to access from InventoryButton in MainScreen
     public void RepositionBodyDrawing_Inventory()
     {
-        if (inventory_Panel.activeSelf)
-        {
-            bodyDrawing.transform.position = inventory_StartingBodyDrawingPos.position;
-        }
+        bodyDrawing.transform.position = inventory_StartingBodyDrawingPos.transform.position;
+        Debug.Log("BodyDrawing spawn in Inventory");
     }
 
     public void RepositionBodyDrawing_Shop()
