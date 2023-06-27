@@ -65,7 +65,7 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
     public void RepositionBodyDrawing_Inventory()
     {
         bodyDrawing.transform.position = inventory_StartingBodyDrawingPos.transform.position;
-        Debug.Log("BodyDrawing spawn in Inventory");
+        //Debug.Log("BodyDrawing spawn in Inventory");
     }
 
     public void RepositionBodyDrawing_Shop()

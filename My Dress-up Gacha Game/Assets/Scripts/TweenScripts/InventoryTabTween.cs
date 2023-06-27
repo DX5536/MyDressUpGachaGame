@@ -16,6 +16,8 @@ public class InventoryTabTween: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        RepositionAllSGPToZero();
+
         Hide_AllSGP();
 
         //We show hair as "default"
@@ -26,6 +28,23 @@ public class InventoryTabTween: MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void RepositionAllSGPToZero()
+    {
+        //Set Top to 0
+        hair_SlotGridPanel.offsetMax = new Vector2(hair_SlotGridPanel.offsetMax.x, 0);
+        head_SlotGridPanel.offsetMax = new Vector2(head_SlotGridPanel.offsetMax.x, 0);
+        torso_SlotGridPanel.offsetMax = new Vector2(torso_SlotGridPanel.offsetMax.x, 0);
+        leg_SlotGridPanel.offsetMax = new Vector2(leg_SlotGridPanel.offsetMax.x, 0);
+        misc_SlotGridPanel.offsetMax = new Vector2(misc_SlotGridPanel.offsetMax.x, 0);
+
+        //Set Bottom to 0
+        hair_SlotGridPanel.offsetMin = new Vector2(hair_SlotGridPanel.offsetMax.x, 0);
+        head_SlotGridPanel.offsetMin = new Vector2(head_SlotGridPanel.offsetMax.x, 0);
+        torso_SlotGridPanel.offsetMin = new Vector2(torso_SlotGridPanel.offsetMax.x, 0);
+        leg_SlotGridPanel.offsetMin = new Vector2(leg_SlotGridPanel.offsetMax.x, 0);
+        misc_SlotGridPanel.offsetMin = new Vector2(misc_SlotGridPanel.offsetMax.x, 0);
     }
 
     private void Hide_AllSGP()

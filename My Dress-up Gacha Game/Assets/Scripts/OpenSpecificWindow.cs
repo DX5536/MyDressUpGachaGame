@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class OpenSpecificWindow: MonoBehaviour
@@ -5,6 +6,9 @@ public class OpenSpecificWindow: MonoBehaviour
     [Header("GO to de/activate")]
     [SerializeField]
     private GameObject windowPanel;
+
+    [SerializeField]
+    private DOTweenValuesScriptableObject DOTweenValuesScriptableObject;
 
     [Header("Window status_READ ONLY")]
     [SerializeField]
@@ -28,6 +32,8 @@ public class OpenSpecificWindow: MonoBehaviour
     //We are doing double check to avoid future conflicts
     public void ChangeWindowStatus()
     {
+        StartCoroutine(SmallDelayForMainPanelsTween(DOTweenValuesScriptableObject.TweenDuration));
+
         //if Window is not active -> change to active
         if (!isWindowActive)
         {
@@ -35,7 +41,8 @@ public class OpenSpecificWindow: MonoBehaviour
         }
         else
         {
-            isWindowActive = false;
+            //isWindowActive = false;
+            StartCoroutine(SmallDelayForMainPanelsTween(DOTweenValuesScriptableObject.TweenDuration));
         }
 
         De_ActivateWindowGO();
@@ -69,6 +76,13 @@ public class OpenSpecificWindow: MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator SmallDelayForMainPanelsTween(float waitDuration)
+    {
+        Debug.Log("Small Delay before closing Panel");
+        yield return new WaitForSeconds(waitDuration);
+        isWindowActive = false;
     }
 
 }
