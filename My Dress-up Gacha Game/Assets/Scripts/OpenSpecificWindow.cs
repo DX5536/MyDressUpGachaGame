@@ -32,20 +32,18 @@ public class OpenSpecificWindow: MonoBehaviour
     //We are doing double check to avoid future conflicts
     public void ChangeWindowStatus()
     {
-        StartCoroutine(SmallDelayForMainPanelsTween(DOTweenValuesScriptableObject.TweenDuration));
-
         //if Window is not active -> change to active
         if (!isWindowActive)
         {
             isWindowActive = true;
+            De_ActivateWindowGO();
         }
         else
         {
             //isWindowActive = false;
-            StartCoroutine(SmallDelayForMainPanelsTween(DOTweenValuesScriptableObject.TweenDuration));
+            StartCoroutine(SmallDelayForMainPanelsTween(DOTweenValuesScriptableObject.TweenDuration, false));
         }
 
-        De_ActivateWindowGO();
     }
 
     private void De_ActivateWindowGO()
@@ -78,11 +76,12 @@ public class OpenSpecificWindow: MonoBehaviour
         }
     }
 
-    IEnumerator SmallDelayForMainPanelsTween(float waitDuration)
+    IEnumerator SmallDelayForMainPanelsTween(float waitDuration, bool localIsWindowActive)
     {
         Debug.Log("Small Delay before closing Panel");
         yield return new WaitForSeconds(waitDuration);
-        isWindowActive = false;
+        isWindowActive = localIsWindowActive;
+        De_ActivateWindowGO();
     }
 
 }

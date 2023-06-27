@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class BodyDrawingSpawnLogic: MonoBehaviour
@@ -9,8 +10,16 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
     [SerializeField]
     private RectTransform bodyDrawing;
 
-    [SerializeField]
+    //[SerializeField]
     private float scaleValue;
+
+    [SerializeField]
+    private SpriteRenderer[] bodyDrawingSpriteRenderers;
+
+    [SerializeField]
+    private DOTweenValuesScriptableObject DOTweenValuesScriptableObject;
+    [SerializeField]
+    private float fadeInOutMultiplier = 1;
 
     [Header("Starting position")]
     [SerializeField]
@@ -25,9 +34,39 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
         scaleValue = bodyDrawing.transform.localScale.x;
         mainScreen_StartingBodyDrawingPos.transform.position = bodyDrawing.transform.position;
 
+        //I'm lazy and I want to automatically find all the sprites within BodyDrawing (as they are the only one with SpriteRenderer).
+        //Find All Sprite Renderer
+        bodyDrawingSpriteRenderers = FindObjectsOfType<SpriteRenderer>(true);
+
         //Make sure BodyDrawing is always active at start
         //if not -> set it active
         RepositionBodyDrawing_MainScreen();
+    }
+
+    private void Fade_BodyDrawing(bool isFadeIn)
+    {
+        //If we are fade in the bodyDrawing aka. make it appears
+        if (isFadeIn)
+        {
+            //turn on all the alpha of bodyDrawingSpriteRenderers to 1
+            foreach (SpriteRenderer bodyItem in bodyDrawingSpriteRenderers)
+            {
+                bodyItem.DOFade(0, 0);
+                bodyItem.DOFade(1, DOTweenValuesScriptableObject.TweenDuration * fadeInOutMultiplier);
+            }
+        }
+
+        //If we are fade out aka. make it disappear
+        else
+        {
+            //turn on all the alpha of bodyDrawingSpriteRenderers to 0
+            foreach (SpriteRenderer bodyItem in bodyDrawingSpriteRenderers)
+            {
+                bodyItem.DOFade(1, 0);
+                bodyItem.DOFade(0, DOTweenValuesScriptableObject.TweenDuration);
+            }
+        }
+
     }
 
     // Update is called once per frame
@@ -42,28 +81,15 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
         bodyDrawing.gameObject.SetActive(true);
         bodyDrawing.transform.position = mainScreen_StartingBodyDrawingPos.transform.position;
         bodyDrawing.transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
-
-        //if GO is not active make it active
-        /*if (!bodyDrawing.gameObject.activeSelf)
-        {
-            //bodyDrawing.gameObject.SetActive(true);
-            //bodyDrawing.transform.position = mainScreen_StartingBodyDrawingPos.transform.position;
-            Debug.Log("BodyDrawing is inactive.");
-        }
-
-        else
-        {
-            //bodyDrawing.gameObject.SetActive(true);
-            //bodyDrawing.transform.position = mainScreen_StartingBodyDrawingPos.transform.position;
-            Debug.Log("BodyDrawing is already active.");
-        }*/
-
+        Fade_BodyDrawing(true);
 
     }
 
     //Public to access from InventoryButton in MainScreen
+    //Unlike other Panel, bodyDrawing moves to another position instead of being deactivated
     public void RepositionBodyDrawing_Inventory()
     {
+        Fade_BodyDrawing(true);
         bodyDrawing.transform.position = inventory_StartingBodyDrawingPos.transform.position;
         //Debug.Log("BodyDrawing spawn in Inventory");
     }
@@ -72,9 +98,8 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
     {
         if (inApp_Panel.activeSelf || gachaShop_Panel.activeSelf)
         {
-            //We hide the bodyDrawing when open the 2 shops
             bodyDrawing.gameObject.SetActive(false);
         }
-
     }
+
 }
