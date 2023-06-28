@@ -15,7 +15,7 @@ MonoBehaviour:
   currentlySelectedBannerID: 0
   currentlyDisplayedPartInventoryID: 0
   resetGainedItemsValue: 1
-  hasGainedHairItems: 010101010100
+  hasGainedHairItems: 000000000000
   hasGainedHeadItems: 000000000000
   hasGainedTorsoItems: 000000000000
   hasGainedLegItems: 000000000000

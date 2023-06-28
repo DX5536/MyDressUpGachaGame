@@ -536,8 +536,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   tagScripts_Inv_Slot_NAME: HAIR
-  inv_Slot_NAME_Toggles: []
+  inv_Slot_NAME_Toggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   foundChild: []
+  foundType_GO:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &57748868
 GameObject:
   m_ObjectHideFlags: 0
@@ -4098,8 +4111,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   tagScripts_Inv_Slot_NAME: MISC
-  inv_Slot_NAME_Toggles: []
+  inv_Slot_NAME_Toggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   foundChild: []
+  foundType_GO:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &583681488
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,8 +5129,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   tagScripts_Inv_Slot_NAME: LEG
-  inv_Slot_NAME_Toggles: []
+  inv_Slot_NAME_Toggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   foundChild: []
+  foundType_GO:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &662201733
 GameObject:
   m_ObjectHideFlags: 0
@@ -8688,23 +8727,6 @@ Transform:
   m_Father: {fileID: 1588850462}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1101201737 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3782350111471054143, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
-  m_PrefabInstance: {fileID: 2700067228535775496}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1101201740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101201737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e684885a5e7ecf141a94dc93d0beb9d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1114416231
 GameObject:
   m_ObjectHideFlags: 0
@@ -11051,23 +11073,6 @@ MonoBehaviour:
   referenceFontSize: -1
   isResettingEffectsOnNewText: 1
   timeScale: 0
---- !u!1 &1422890480 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8965077658920121259, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
-  m_PrefabInstance: {fileID: 2700067228535775496}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1422890483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422890480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e684885a5e7ecf141a94dc93d0beb9d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1438619876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 718315842738204712, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
@@ -11144,8 +11149,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   tagScripts_Inv_Slot_NAME: TORSO
-  inv_Slot_NAME_Toggles: []
+  inv_Slot_NAME_Toggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   foundChild: []
+  foundType_GO:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1448015861
 GameObject:
   m_ObjectHideFlags: 0
@@ -11690,8 +11708,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   tagScripts_Inv_Slot_NAME: HEAD
-  inv_Slot_NAME_Toggles: []
+  inv_Slot_NAME_Toggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   foundChild: []
+  foundType_GO:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1530416329
 GameObject:
   m_ObjectHideFlags: 0

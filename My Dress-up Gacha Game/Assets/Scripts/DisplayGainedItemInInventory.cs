@@ -29,7 +29,6 @@ public class DisplayGainedItemInInventory: MonoBehaviour
     [Header("READ ONLY")]
     [SerializeField]
     private GameObject[] foundChild;
-
     [SerializeField]
     //private string[] foundType_Names;
     private GameObject[] foundType_GO;
@@ -80,28 +79,92 @@ public class DisplayGainedItemInInventory: MonoBehaviour
             }
             System.Array.Sort(foundType_Names);*/
 
-            var foundType_Hair = FindObjectsOfType<TagScripts_Inv_Slot_HAIR>();
+            var foundType_Hair = FindObjectsOfType<TagScripts_Inv_Slot_HAIR>(true);
             for (int i = 0;i < foundType_Hair.Length;i++)
             {
+                //Find and assign the foundType to the local Array
                 foundType_GO[i] = foundType_Hair[i].gameObject;
             }
+            //Sort all the found_GO by name/Number using the IComparer!
             Array.Sort(foundType_GO, new GameObjectComparerByName());
+
+            //Get Toggle component of these foundType_GO and save it to inv_Slot_NAME_Toggles
+            for (int i = 0;i < foundType_GO.Length;i++)
+            {
+                inv_Slot_NAME_Toggles[i] = foundType_GO[i].GetComponent<Toggle>();
+            }
         }
 
-        //Head has the script "tagScripts_Inv_Slot_MISC"
-        else if (tagScripts_Inv_Slot_NAME == "HEAD" || tagScripts_Inv_Slot_NAME == "MISC")
+        else if (tagScripts_Inv_Slot_NAME == "HEAD")
         {
+            var foundType_Head = FindObjectsOfType<TagScripts_Inv_Slot_HEAD>(true);
+            for (int i = 0;i < foundType_Head.Length;i++)
+            {
+                //Find and assign the foundType to the local Array
+                foundType_GO[i] = foundType_Head[i].gameObject;
+            }
+            //Sort all the found_GO by name/Number using the IComparer!
+            Array.Sort(foundType_GO, new GameObjectComparerByName());
 
+            //Get Toggle component of these foundType_GO and save it to inv_Slot_NAME_Toggles
+            for (int i = 0;i < foundType_GO.Length;i++)
+            {
+                inv_Slot_NAME_Toggles[i] = foundType_GO[i].GetComponent<Toggle>();
+            }
         }
 
         else if (tagScripts_Inv_Slot_NAME == "TORSO")
         {
+            var foundType_Torso = FindObjectsOfType<TagScripts_Inv_Slot_TORSO>(true);
+            for (int i = 0;i < foundType_Torso.Length;i++)
+            {
+                //Find and assign the foundType to the local Array
+                foundType_GO[i] = foundType_Torso[i].gameObject;
+            }
+            //Sort all the found_GO by name/Number using the IComparer!
+            Array.Sort(foundType_GO, new GameObjectComparerByName());
 
+            //Get Toggle component of these foundType_GO and save it to inv_Slot_NAME_Toggles
+            for (int i = 0;i < foundType_GO.Length;i++)
+            {
+                inv_Slot_NAME_Toggles[i] = foundType_GO[i].GetComponent<Toggle>();
+            }
         }
 
         else if (tagScripts_Inv_Slot_NAME == "LEG")
         {
+            var foundType_Leg = FindObjectsOfType<TagScripts_Inv_Slot_LEG>(true);
+            for (int i = 0;i < foundType_Leg.Length;i++)
+            {
+                //Find and assign the foundType to the local Array
+                foundType_GO[i] = foundType_Leg[i].gameObject;
+            }
+            //Sort all the found_GO by name/Number using the IComparer!
+            Array.Sort(foundType_GO, new GameObjectComparerByName());
 
+            //Get Toggle component of these foundType_GO and save it to inv_Slot_NAME_Toggles
+            for (int i = 0;i < foundType_GO.Length;i++)
+            {
+                inv_Slot_NAME_Toggles[i] = foundType_GO[i].GetComponent<Toggle>();
+            }
+        }
+
+        else if (tagScripts_Inv_Slot_NAME == "MISC")
+        {
+            var foundType_Misc = FindObjectsOfType<TagScripts_Inv_Slot_MISC>(true);
+            for (int i = 0;i < foundType_Misc.Length;i++)
+            {
+                //Find and assign the foundType to the local Array
+                foundType_GO[i] = foundType_Misc[i].gameObject;
+            }
+            //Sort all the found_GO by name/Number using the IComparer!
+            Array.Sort(foundType_GO, new GameObjectComparerByName());
+
+            //Get Toggle component of these foundType_GO and save it to inv_Slot_NAME_Toggles
+            for (int i = 0;i < foundType_GO.Length;i++)
+            {
+                inv_Slot_NAME_Toggles[i] = foundType_GO[i].GetComponent<Toggle>();
+            }
         }
 
         else
