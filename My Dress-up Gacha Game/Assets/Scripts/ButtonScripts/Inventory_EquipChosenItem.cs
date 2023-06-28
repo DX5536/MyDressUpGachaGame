@@ -3,8 +3,9 @@ using UnityEngine.UI;
 
 public class Inventory_EquipChosenItem: MonoBehaviour
 {
+    [Header("Array in case there are 2 sprites of an object (eg. Hair)")]
     [SerializeField]
-    private GameObject selected_BodyDrawing_Item;
+    private SpriteRenderer[] selected_BodyDrawing_Items;
 
     [SerializeField]
     private Toggle inv_Slot_;
@@ -12,7 +13,7 @@ public class Inventory_EquipChosenItem: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        inv_Slot_ = this.GetComponent<Toggle>();
     }
 
     // Update is called once per frame
@@ -26,11 +27,17 @@ public class Inventory_EquipChosenItem: MonoBehaviour
     {
         if (isItemEquipped)
         {
-            selected_BodyDrawing_Item.SetActive(true);
+            foreach (var item in selected_BodyDrawing_Items)
+            {
+                item.gameObject.SetActive(true);
+            }
         }
         else
         {
-            selected_BodyDrawing_Item.SetActive(false);
+            foreach (var item in selected_BodyDrawing_Items)
+            {
+                item.gameObject.SetActive(false);
+            }
         }
     }
 }
