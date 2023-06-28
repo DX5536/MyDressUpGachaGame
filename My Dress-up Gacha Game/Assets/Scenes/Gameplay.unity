@@ -370,10 +370,10 @@ RectTransform:
   m_Father: {fileID: 508958581}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 110, y: -180}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29892060
 MonoBehaviour:
@@ -1088,7 +1088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -366.41003, y: 0}
+  m_AnchoredPosition: {x: -366.40997, y: 0}
   m_SizeDelta: {x: -732.82, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &232072612
@@ -1242,10 +1242,10 @@ RectTransform:
   m_Father: {fileID: 508958581}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 350, y: -180}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &247412219
 MonoBehaviour:
@@ -1877,6 +1877,18 @@ MonoBehaviour:
       - m_Target: {fileID: 533285210}
         m_TargetAssemblyTypeName: InventoryTabTween, Assembly-CSharp
         m_MethodName: Show_LegSGP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 648036089}
+        m_TargetAssemblyTypeName: DisplayGainedItemInInventory, Assembly-CSharp
+        m_MethodName: UpdateInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5312,10 +5324,10 @@ RectTransform:
   m_Father: {fileID: 508958581}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 350, y: -300}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &663590799
 MonoBehaviour:
@@ -5714,6 +5726,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1439712583}
+        m_TargetAssemblyTypeName: DisplayGainedItemInInventory, Assembly-CSharp
+        m_MethodName: UpdateInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &677689066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5825,7 +5849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1660, y: -92.975006}
+  m_AnchoredPosition: {x: 1660, y: -92.974976}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &725803912
@@ -7486,7 +7510,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 319.99988, y: 0}
+  m_AnchoredPosition: {x: 319.99982, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &956925036
@@ -7696,7 +7720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 610.00006, y: -92.975006}
+  m_AnchoredPosition: {x: 610.0001, y: -92.974976}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967678690
@@ -7834,7 +7858,7 @@ GameObject:
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &981471224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8165,6 +8189,18 @@ MonoBehaviour:
       - m_Target: {fileID: 533285210}
         m_TargetAssemblyTypeName: InventoryTabTween, Assembly-CSharp
         m_MethodName: Show_MiscSGP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 568722818}
+        m_TargetAssemblyTypeName: DisplayGainedItemInInventory, Assembly-CSharp
+        m_MethodName: UpdateInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9478,7 +9514,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 610.00006, y: -307.975}
+  m_AnchoredPosition: {x: 610.0001, y: -307.975}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235963752
@@ -10499,10 +10535,10 @@ RectTransform:
   m_Father: {fileID: 508958581}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 110, y: -60}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1349835665
 MonoBehaviour:
@@ -12615,6 +12651,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1525637269}
+        m_TargetAssemblyTypeName: DisplayGainedItemInInventory, Assembly-CSharp
+        m_MethodName: UpdateInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1620417529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13416,10 +13464,10 @@ RectTransform:
   m_Father: {fileID: 508958581}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 350, y: -60}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771680390
 MonoBehaviour:
@@ -13974,6 +14022,18 @@ MonoBehaviour:
       - m_Target: {fileID: 533285210}
         m_TargetAssemblyTypeName: InventoryTabTween, Assembly-CSharp
         m_MethodName: Show_HairSGP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 53353491}
+        m_TargetAssemblyTypeName: DisplayGainedItemInInventory, Assembly-CSharp
+        m_MethodName: UpdateInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14902,7 +14962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1310, y: -92.975006}
+  m_AnchoredPosition: {x: 1310, y: -92.974976}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1931980600
@@ -15191,10 +15251,10 @@ RectTransform:
   m_Father: {fileID: 508958581}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 110, y: -300}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958511070
 MonoBehaviour:
@@ -15963,7 +16023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 260.00006, y: -307.975}
+  m_AnchoredPosition: {x: 260.00012, y: -307.975}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063693034
@@ -16366,7 +16426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960.00006, y: -92.975006}
+  m_AnchoredPosition: {x: 960.00006, y: -92.974976}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108344836
@@ -16505,7 +16565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 260.00006, y: -92.975006}
+  m_AnchoredPosition: {x: 260.00012, y: -92.974976}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2136454252
@@ -17400,6 +17460,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1240614738656825696, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_Spacing.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1333251007342451680, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -18161,6 +18225,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4b69bb8a08f15e446a5bba6c3291a414, type: 3}
     - target: {fileID: 6225717969662351731, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_Spacing.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225717969662351731, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Constraint
       value: 2
       objectReference: {fileID: 0}
@@ -18191,6 +18259,10 @@ PrefabInstance:
     - target: {fileID: 6702975561725863874, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6737799184553751797, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_Spacing.y
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6737799184553751797, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Constraint
@@ -18256,6 +18328,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.25490198
       objectReference: {fileID: 0}
+    - target: {fileID: 7135739636859195317, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_Spacing.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7218882526894375839, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Color.a
       value: 0.25490198
@@ -18311,6 +18387,10 @@ PrefabInstance:
     - target: {fileID: 7869301315720211497, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913433729345807014, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_Spacing.y
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7913433729345807014, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Constraint
@@ -18656,6 +18736,18 @@ MonoBehaviour:
       - m_Target: {fileID: 533285210}
         m_TargetAssemblyTypeName: InventoryTabTween, Assembly-CSharp
         m_MethodName: RepositionAllSGPToZero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 53353491}
+        m_TargetAssemblyTypeName: DisplayGainedItemInInventory, Assembly-CSharp
+        m_MethodName: UpdateInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
