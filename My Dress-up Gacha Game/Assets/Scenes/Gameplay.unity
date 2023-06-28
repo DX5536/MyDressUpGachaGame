@@ -17668,10 +17668,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2700067228714014001, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
-      propertyPath: m_ShowMaskGraphic
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2700067228714014012, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Name
       value: SlotGridGrouping_Mask
