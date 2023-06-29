@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Inventory_EquipChosenItem: MonoBehaviour
 {
@@ -50,6 +49,7 @@ public class Inventory_EquipChosenItem: MonoBehaviour
 
         if (isItemEquipped)
         {
+            //This for-Loop will make sure any item that is NOT the index will be unequipped
             for (int i = 0;i < displayGainedItemInInventory.Inv_Slot_NAME_Toggles.Length;i++)
             {
                 if (i != toggleIndex)
@@ -58,6 +58,7 @@ public class Inventory_EquipChosenItem: MonoBehaviour
                 }
             }
 
+            //We do not need .isOn = true cuz when you click the button -> automatically isOn = true
             foreach (var item in selected_BodyDrawing_Items)
             {
                 item.gameObject.SetActive(true);
@@ -71,25 +72,6 @@ public class Inventory_EquipChosenItem: MonoBehaviour
                 item.gameObject.SetActive(false);
             }
         }
-    }
-
-    public void TurnToggleOn(bool isItemOn)
-    {
-        var thisToggle = gameObject.GetComponent<Toggle>();
-        if (!isItemOn)
-        {
-            thisToggle.isOn = false;
-        }
-
-        else
-        {
-            thisToggle.isOn = true;
-        }
-    }
-
-    private void ToggleIsOn(int caseIndex)
-    {
-        displayGainedItemInInventory.Inv_Slot_NAME_Toggles[caseIndex].isOn = true;
     }
 
 }

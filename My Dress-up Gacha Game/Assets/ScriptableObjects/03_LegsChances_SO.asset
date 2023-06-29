@@ -14,13 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bannerItemIndex: 3
   itemNames:
-  - Skirt
   - Jeans
-  - Robe
-  - Underwear
-  itemChances: 46000000140000000700000003000000
+  - Baggy Pants
+  - Sport Boxer
+  - Swimsuit Bottom
+  - Shorts & Straps
+  - Mini Skirt
+  itemChances: 2d000000140000000f0000000a0000000700000003000000
   itemImages:
-  - {fileID: 21300000, guid: e904229d451106c4c8f5e7f555442de5, type: 3}
-  - {fileID: 21300000, guid: 59159c0a124cec046b35900d6d13e318, type: 3}
-  - {fileID: 21300000, guid: ef228aa20c4083142a1972012f368003, type: 3}
-  - {fileID: 21300000, guid: c57252b3d9d46344a923d640e98fdf3c, type: 3}
+  - {fileID: 21300000, guid: 2db9b7088c02c8e4db3d389c11a13230, type: 3}
+  - {fileID: 21300000, guid: 3015640ca988ba74595794c432c36c25, type: 3}
+  - {fileID: 21300000, guid: 34551494b861988428b76bb35795f850, type: 3}
+  - {fileID: 21300000, guid: 21bda181f4ac33741b3713711d0de7ed, type: 3}
+  - {fileID: 21300000, guid: e12f9b3668c84c14f86ee57bb7f3fcdf, type: 3}
+  - {fileID: 21300000, guid: d29d1359c9790a44e9345dbad0822be4, type: 3}

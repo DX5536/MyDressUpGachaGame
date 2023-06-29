@@ -15,12 +15,10 @@ MonoBehaviour:
   bannerItemIndex: 1
   itemNames:
   - Glasses
-  - EyePatch
-  - Earring
-  - Blindfold
-  itemChances: 46000000140000000700000003000000
+  - Sunglasses
+  - Scars
+  itemChances: 46000000140000000a000000
   itemImages:
-  - {fileID: 21300000, guid: 928c544e35a15fb4ca4c5523ac578bdf, type: 3}
-  - {fileID: 21300000, guid: 5d698c217e94c64428ab24b80256959b, type: 3}
-  - {fileID: 21300000, guid: 76439d78e0dfebc45ae0b0a1d81dae75, type: 3}
-  - {fileID: 21300000, guid: 74373303c5e12a74687063ba5f9f1e59, type: 3}
+  - {fileID: 21300000, guid: bce50c728e8a5a44bbeed515886c1f24, type: 3}
+  - {fileID: 21300000, guid: 4b69bb8a08f15e446a5bba6c3291a414, type: 3}
+  - {fileID: 21300000, guid: 654973ac5f74dca4cac52bc7f1a34d8f, type: 3}

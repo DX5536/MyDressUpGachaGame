@@ -867,7 +867,6 @@ MonoBehaviour:
   bodyDrawing_ITEMS: []
   displayGainedItemInInventory: {fileID: 1525637269}
   toggleIndex: 4
-  isThisToggleOn: 0
 --- !u!114 &134397841 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5351190777615798724, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
@@ -2235,7 +2234,6 @@ MonoBehaviour:
   bodyDrawing_ITEMS: []
   displayGainedItemInInventory: {fileID: 1525637269}
   toggleIndex: 3
-  isThisToggleOn: 0
 --- !u!1 &316199765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 841619882651106515, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
@@ -3025,7 +3023,6 @@ MonoBehaviour:
   bodyDrawing_ITEMS: []
   displayGainedItemInInventory: {fileID: 568722818}
   toggleIndex: 4
-  isThisToggleOn: 0
 --- !u!1 &432993255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4558157103366829872, guid: 91827471f1a68e74d94ba08ebaecc902, type: 3}
@@ -6188,7 +6185,6 @@ MonoBehaviour:
   bodyDrawing_ITEMS: []
   displayGainedItemInInventory: {fileID: 568722818}
   toggleIndex: 5
-  isThisToggleOn: 0
 --- !u!114 &722372535 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3756506831713613553, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
@@ -6704,7 +6700,6 @@ MonoBehaviour:
   bodyDrawing_ITEMS: []
   displayGainedItemInInventory: {fileID: 1525637269}
   toggleIndex: 5
-  isThisToggleOn: 0
 --- !u!1 &758180061
 GameObject:
   m_ObjectHideFlags: 0
@@ -10954,7 +10949,6 @@ MonoBehaviour:
   bodyDrawing_ITEMS: []
   displayGainedItemInInventory: {fileID: 568722818}
   toggleIndex: 3
-  isThisToggleOn: 0
 --- !u!1 &1317498793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5304044251502101408, guid: 91827471f1a68e74d94ba08ebaecc902, type: 3}

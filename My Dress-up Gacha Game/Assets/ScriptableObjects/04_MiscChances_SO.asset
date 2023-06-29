@@ -14,13 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bannerItemIndex: 4
   itemNames:
-  - Halo
-  - Chair
-  - Flying Swords
-  - Dragon
-  itemChances: 46000000140000000700000003000000
+  - Necklace
+  - Muscle
+  - Belly Piercing
+  itemChances: 46000000140000000a000000
   itemImages:
-  - {fileID: 21300000, guid: e904229d451106c4c8f5e7f555442de5, type: 3}
-  - {fileID: 21300000, guid: 59159c0a124cec046b35900d6d13e318, type: 3}
-  - {fileID: 21300000, guid: ef228aa20c4083142a1972012f368003, type: 3}
-  - {fileID: 21300000, guid: c57252b3d9d46344a923d640e98fdf3c, type: 3}
+  - {fileID: 21300000, guid: 08029f88b3ff6d04caad07be4473b08a, type: 3}
+  - {fileID: 21300000, guid: 5b95337a5a93261439238e3c572514dc, type: 3}
+  - {fileID: 21300000, guid: d6efdeeab54aaf14bab719b3c2da7508, type: 3}

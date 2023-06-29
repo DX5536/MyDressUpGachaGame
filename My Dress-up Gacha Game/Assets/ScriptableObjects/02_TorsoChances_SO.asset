@@ -15,12 +15,16 @@ MonoBehaviour:
   bannerItemIndex: 2
   itemNames:
   - T-Shirt
-  - Vest
-  - Jacket
-  - Trench Coat
-  itemChances: 46000000140000000700000003000000
+  - Shirt
+  - Sport Bra
+  - Swimsuit Top
+  - Dress
+  - Turtleneck Jacket
+  itemChances: 2d000000140000000f0000000a0000000700000003000000
   itemImages:
-  - {fileID: 21300000, guid: e904229d451106c4c8f5e7f555442de5, type: 3}
-  - {fileID: 21300000, guid: 59159c0a124cec046b35900d6d13e318, type: 3}
-  - {fileID: 21300000, guid: ef228aa20c4083142a1972012f368003, type: 3}
-  - {fileID: 21300000, guid: c57252b3d9d46344a923d640e98fdf3c, type: 3}
+  - {fileID: 21300000, guid: af8d64f4f29069c4087594d474083e53, type: 3}
+  - {fileID: 21300000, guid: fbe73f751857d6540b1ed7f3d732b77d, type: 3}
+  - {fileID: 21300000, guid: 6e1fd6f3d62d0f249b2bdd11d108ac75, type: 3}
+  - {fileID: 21300000, guid: 4379182d64db3c14f964c54c978e5a04, type: 3}
+  - {fileID: 21300000, guid: e0fff0b98c2bb0b4b84213864a28b254, type: 3}
+  - {fileID: 21300000, guid: a374e5d1a1043d94087a2cbfc77a3354, type: 3}

@@ -20,7 +20,7 @@ MonoBehaviour:
   - Wolfcut
   - Sweep Back
   - Short Hair
-  itemChances: 32000000140000000f0000000a0000000400000001000000
+  itemChances: 2d000000140000000f0000000a0000000700000003000000
   itemImages:
   - {fileID: 21300000, guid: 0d6cc3d44fb744545be222027216ff9d, type: 3}
   - {fileID: 21300000, guid: 052e0053ad4576f4eaf9b3bbc68b3237, type: 3}
