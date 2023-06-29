@@ -43,6 +43,17 @@ public class DisplayGainedItemInInventory: MonoBehaviour
     //Start didn't work but OnEnable() did -_-
     void OnEnable()
     {
+        FindChildren();
+
+    }
+
+    private void Start()
+    {
+        FindChildren();
+    }
+
+    private void FindChildren()
+    {
         foundChild = GameObject.FindGameObjectsWithTag(itemIMG_Tag);
         if (foundChild == null)
         {
@@ -77,7 +88,6 @@ public class DisplayGainedItemInInventory: MonoBehaviour
             }
 
         }
-
     }
 
     // Update is called once per frame
