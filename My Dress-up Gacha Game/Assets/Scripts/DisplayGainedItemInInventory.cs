@@ -92,11 +92,18 @@ public class DisplayGainedItemInInventory: MonoBehaviour
                 var foundType_Hair = FindObjectsOfType<TagScripts_Inv_Slot_HAIR>(true);
                 for (int i = 0;i < foundType_Hair.Length;i++)
                 {
+
                     //Find and assign the foundType to the local Array
                     foundType_GO[i] = foundType_Hair[i].gameObject;
                 }
                 //Sort all the found_GO by name/Number using the IComparer!
                 Array.Sort(foundType_GO, new GameObjectComparerByName());
+
+                //Get Toggle component of these foundType_GO and save it to inv_Slot_NAME_Toggles
+                for (int i = 0;i < foundType_GO.Length;i++)
+                {
+                    inv_Slot_NAME_Toggles[i] = foundType_GO[i].GetComponent<Toggle>();
+                }
                 break;
 
             case "HEAD":
@@ -340,6 +347,9 @@ public class DisplayGainedItemInInventory: MonoBehaviour
         //If player has NOT gained that item
         if (!hasGainedItem)
         {
+            //Make the toggle NOT interactable
+            inv_Slot_NAME_Toggles[gainedItemIndex].interactable = false;
+
             //Turn off the image by make alpha = 0
             gainedItem_IMG[gainedItemIndex].DOFade(0, 0);
         }
@@ -347,6 +357,9 @@ public class DisplayGainedItemInInventory: MonoBehaviour
         //If player has gained that item
         else
         {
+            //Make the toggle interactable
+            inv_Slot_NAME_Toggles[gainedItemIndex].interactable = true;
+
             //Turn that image on by make alpha = 1
             gainedItem_IMG[gainedItemIndex].DOFade(1, 0);
         }

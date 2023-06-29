@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Inventory_EquipChosenItem: MonoBehaviour
 {
@@ -8,12 +8,16 @@ public class Inventory_EquipChosenItem: MonoBehaviour
     private SpriteRenderer[] selected_BodyDrawing_Items;
 
     [SerializeField]
-    private Toggle inv_Slot_;
+    private UnityEvent unequipAllItems_TurnOffToggle_Event;
+
+    [Header("We need this to access the list of SpriteRenderer of bodyDrawing")]
+    [SerializeField]
+    private BodyDrawingSpawnLogic bodyDrawingSpawnLogic;
 
     // Start is called before the first frame update
     void Start()
     {
-        inv_Slot_ = this.GetComponent<Toggle>();
+
     }
 
     // Update is called once per frame
@@ -25,13 +29,18 @@ public class Inventory_EquipChosenItem: MonoBehaviour
     //public to access from OnValueChanged(bool) of the toggle
     public void Un_Equip_Item(bool isItemEquipped)
     {
+        unequipAllItems_TurnOffToggle_Event?.Invoke();
+
         if (isItemEquipped)
         {
+
             foreach (var item in selected_BodyDrawing_Items)
             {
                 item.gameObject.SetActive(true);
+
             }
         }
+
         else
         {
             foreach (var item in selected_BodyDrawing_Items)
