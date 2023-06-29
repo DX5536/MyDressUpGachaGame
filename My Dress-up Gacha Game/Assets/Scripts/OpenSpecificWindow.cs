@@ -10,9 +10,6 @@ public class OpenSpecificWindow: MonoBehaviour
     [SerializeField]
     private DOTweenValuesScriptableObject DOTweenValuesScriptableObject;
 
-    [SerializeField]
-    private bool isWindowPanelInventory;
-
     [Header("Window status_READ ONLY")]
     [SerializeField]
     private bool isWindowActive;
@@ -22,21 +19,8 @@ public class OpenSpecificWindow: MonoBehaviour
     {
         //Start with Window deactivated
         //Unless it's Inventory: activated -> Deactivated
-        if (isWindowPanelInventory)
-        {
-            //There is a bug that require Inventory to be on at start THEN unactive
-            //To find all the necessary Child_GO
-            StartCoroutine(SmallDelayForInventory());
-
-        }
-
-        else
-        {
-            windowPanel.SetActive(false);
-            isWindowActive = windowPanel.activeSelf;
-        }
-
-
+        windowPanel.SetActive(false);
+        isWindowActive = windowPanel.activeSelf;
     }
 
     // Update is called once per frame
@@ -45,8 +29,12 @@ public class OpenSpecificWindow: MonoBehaviour
 
     }
 
+    //There is a bug that require Inventory to be on at start THEN unactive
+    //To find all the necessary Child_GO
+    private void InventoryOnAtStart(bool isInventory)
+    {
 
-
+    }
 
     //public method so button Event can access
     //We are doing double check to avoid future conflicts
@@ -102,15 +90,5 @@ public class OpenSpecificWindow: MonoBehaviour
         yield return new WaitForSeconds(waitDuration);
         isWindowActive = localIsWindowActive;
         De_ActivateWindowGO();
-    }
-
-    IEnumerator SmallDelayForInventory()
-    {
-        Debug.Log("Small Delay for inventory at start");
-        windowPanel.SetActive(true);
-        yield return new WaitForSeconds(0.01f);
-        windowPanel.SetActive(false);
-        isWindowActive = windowPanel.activeSelf;
-
     }
 }
