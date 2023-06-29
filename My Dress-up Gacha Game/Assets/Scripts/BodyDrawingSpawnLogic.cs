@@ -4,7 +4,7 @@ using UnityEngine;
 public class BodyDrawingSpawnLogic: MonoBehaviour
 {
     [SerializeField]
-    private GameObject mainScreen_Panel, inventory_Panel, gachaShop_Panel, inApp_Panel;
+    private GameObject mainScreen_Panel, inventory_Panel, gachaShop_Panel, inApp_Panel, credits_Panel;
 
     [Header("Body Drawing GO")]
     [SerializeField]
@@ -96,7 +96,7 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
 
     public void RepositionBodyDrawing_Shop()
     {
-        if (inApp_Panel.activeSelf || gachaShop_Panel.activeSelf)
+        if (inApp_Panel.activeSelf || gachaShop_Panel.activeSelf || credits_Panel.activeSelf)
         {
             bodyDrawing.gameObject.SetActive(false);
         }

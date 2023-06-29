@@ -5,10 +5,10 @@ using UnityEngine.UI;
 public class MainPanelsTween: MonoBehaviour
 {
     [SerializeField]
-    private RectTransform inventory_Panel, inApp_Panel, gachaShop_Panel;
+    private RectTransform inventory_Panel, inApp_Panel, gachaShop_Panel, credits_Panel;
 
     //[SerializeField]
-    private Image inventory_Panel_Image, inApp_Panel_Image, gachaShop_Panel_Image;
+    private Image inventory_Panel_Image, inApp_Panel_Image, gachaShop_Panel_Image, credits_Panel_Image;
 
     [SerializeField]
     private DOTweenValuesScriptableObject DOTweenValuesScriptableObject;
@@ -18,10 +18,12 @@ public class MainPanelsTween: MonoBehaviour
         inventory_Panel_Image = inventory_Panel.GetComponent<Image>();
         inApp_Panel_Image = inApp_Panel.GetComponent<Image>();
         gachaShop_Panel_Image = gachaShop_Panel.GetComponent<Image>();
+        credits_Panel_Image = credits_Panel.GetComponent<Image>();
 
         inventory_Panel_Image.DOFade(0, 0);
         inApp_Panel_Image.DOFade(0, 0);
         gachaShop_Panel_Image.DOFade(0, 0);
+        credits_Panel_Image.DOFade(0, 0);
     }
 
     // Update is called once per frame
@@ -56,6 +58,12 @@ public class MainPanelsTween: MonoBehaviour
         gachaShop_Panel_Image.DOFade(1, DOTweenValuesScriptableObject.TweenDuration);
     }
 
+    public void ShowTween_Credits()
+    {
+        credits_Panel.DOScaleX(1, 0);
+        credits_Panel_Image.DOFade(1, DOTweenValuesScriptableObject.TweenDuration);
+    }
+
     public void HideTween_ScaleX_AllPanels(string panelName)
     {
         if (panelName == inventory_Panel.gameObject.name)
@@ -74,6 +82,12 @@ public class MainPanelsTween: MonoBehaviour
         {
             gachaShop_Panel.DOScaleX(0, DOTweenValuesScriptableObject.TweenDuration);
             gachaShop_Panel_Image.DOFade(0, DOTweenValuesScriptableObject.TweenDuration);
+        }
+
+        else if (panelName == credits_Panel.gameObject.name)
+        {
+            credits_Panel.DOScaleX(0, DOTweenValuesScriptableObject.TweenDuration);
+            credits_Panel_Image.DOFade(0, DOTweenValuesScriptableObject.TweenDuration);
         }
 
         else
