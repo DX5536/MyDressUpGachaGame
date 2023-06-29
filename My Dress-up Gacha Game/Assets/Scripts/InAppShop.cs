@@ -13,16 +13,16 @@ public class InAppShop: MonoBehaviour
     [SerializeField]
     private float countDuration;
 
-    //[SerializeField]
+    [SerializeField]
     private int localTicketAmount;
-    //[SerializeField]
+    [SerializeField]
     private float localMoneyAmount;
 
     //currentTicketValue = is what it's currently displaying each seconds
     //targetTicketAmount = end goal of the Tween
-    //[SerializeField]
+    [SerializeField]
     private float currentTicketValue, targetTicketAmount;
-    //[SerializeField]
+    [SerializeField]
     private float currentMoneyValue, targetMoneyAmount;
 
     private Coroutine countTicketCoroutine;
@@ -42,7 +42,7 @@ public class InAppShop: MonoBehaviour
     {
         DisplaySummonTicketAndMoney();
 
-        targetTicketAmount = currentTicketValue = localTicketAmount;
+        //targetTicketAmount = currentTicketValue = localTicketAmount;
         targetMoneyAmount = currentMoneyValue = localMoneyAmount;
     }
 
@@ -74,6 +74,10 @@ public class InAppShop: MonoBehaviour
         //Save values from SO to a local Variable 
         localTicketAmount = currencyScriptableObject.SummonTicketAmount;
         localMoneyAmount = currencyScriptableObject.TotalRealMoneyAmount;
+
+        //update currentTicketAmount ass it changes with summon
+        currentTicketValue = localTicketAmount;
+        targetTicketAmount = currencyScriptableObject.SummonTicketAmount;
 
         //Start with pasting whatever amount of summonTicket in SO in UI
         ticketAmount_TMP.text = localTicketAmount.ToString();
