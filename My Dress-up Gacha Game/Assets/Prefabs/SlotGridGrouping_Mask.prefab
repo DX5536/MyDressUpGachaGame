@@ -1684,21 +1684,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: LEG
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -1706,7 +1691,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: legSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 2
 --- !u!1 &598207265948768697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,21 +2037,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TORSO
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -2073,7 +2044,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: torsoSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 2
 --- !u!1 &718315842738204712
 GameObject:
   m_ObjectHideFlags: 0
@@ -4405,21 +4377,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: LEG
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -4427,7 +4384,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: legSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 3
 --- !u!1 &1282960319858212368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6538,21 +6496,6 @@ MonoBehaviour:
   selected_BodyDrawing_Items:
   - {fileID: 0}
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2275578373942281204}
-        m_TargetAssemblyTypeName: Inventory_EquipChosenItem, Assembly-CSharp
-        m_MethodName: Un_Equip_Item
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HAIR
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -6565,7 +6508,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: hairSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 4
 --- !u!1 &1936546381756524092
 GameObject:
   m_ObjectHideFlags: 0
@@ -7097,26 +7041,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: MISC
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: miscSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 2
 --- !u!1 &2096701466801279486
 GameObject:
   m_ObjectHideFlags: 0
@@ -8506,21 +8436,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: LEG
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -8528,7 +8443,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: legSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 5
 --- !u!1 &2531175500043169461
 GameObject:
   m_ObjectHideFlags: 0
@@ -9302,21 +9218,6 @@ MonoBehaviour:
   selected_BodyDrawing_Items:
   - {fileID: 0}
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2275578373942281204}
-        m_TargetAssemblyTypeName: Inventory_EquipChosenItem, Assembly-CSharp
-        m_MethodName: Un_Equip_Item
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HAIR
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -9329,7 +9230,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: hairSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 0
 --- !u!1 &2700067228226107331
 GameObject:
   m_ObjectHideFlags: 0
@@ -12654,26 +12556,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HEAD
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: headSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 0
 --- !u!1 &3809895130775110554
 GameObject:
   m_ObjectHideFlags: 0
@@ -16134,21 +16022,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TORSO
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -16156,7 +16029,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: torsoSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 1
 --- !u!1 &5005518963341113891
 GameObject:
   m_ObjectHideFlags: 0
@@ -16323,21 +16197,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TORSO
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -16345,7 +16204,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: torsoSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 3
 --- !u!1 &5029763073870010937
 GameObject:
   m_ObjectHideFlags: 0
@@ -16611,21 +16471,6 @@ MonoBehaviour:
   selected_BodyDrawing_Items:
   - {fileID: 0}
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2275578373942281204}
-        m_TargetAssemblyTypeName: Inventory_EquipChosenItem, Assembly-CSharp
-        m_MethodName: Un_Equip_Item
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HAIR
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -16638,7 +16483,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: hairSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 3
 --- !u!1 &5094350131591661863
 GameObject:
   m_ObjectHideFlags: 0
@@ -18412,21 +18258,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TORSO
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -18434,7 +18265,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: torsoSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 5
 --- !u!1 &5549442559469748611
 GameObject:
   m_ObjectHideFlags: 0
@@ -18602,21 +18434,6 @@ MonoBehaviour:
   selected_BodyDrawing_Items:
   - {fileID: 0}
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2275578373942281204}
-        m_TargetAssemblyTypeName: Inventory_EquipChosenItem, Assembly-CSharp
-        m_MethodName: Un_Equip_Item
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HAIR
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -18629,7 +18446,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: hairSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 2
 --- !u!1 &5652585149657850354
 GameObject:
   m_ObjectHideFlags: 0
@@ -18796,21 +18614,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: LEG
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -18818,7 +18621,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: legSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 1
 --- !u!1 &5718631160829669856
 GameObject:
   m_ObjectHideFlags: 0
@@ -19252,26 +19056,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HEAD
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: headSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 1
 --- !u!1 &5930280304580966186
 GameObject:
   m_ObjectHideFlags: 0
@@ -20087,21 +19877,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TORSO
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -20109,7 +19884,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: torsoSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 0
 --- !u!1 &6244128781486242304
 GameObject:
   m_ObjectHideFlags: 0
@@ -20601,21 +20377,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: LEG
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -20623,7 +20384,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: legSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 4
 --- !u!1 &6331142687789833658
 GameObject:
   m_ObjectHideFlags: 0
@@ -20791,21 +20553,6 @@ MonoBehaviour:
   selected_BodyDrawing_Items:
   - {fileID: 0}
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2275578373942281204}
-        m_TargetAssemblyTypeName: Inventory_EquipChosenItem, Assembly-CSharp
-        m_MethodName: Un_Equip_Item
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HAIR
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -20818,7 +20565,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: hairSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 1
 --- !u!1 &6427082739253237615
 GameObject:
   m_ObjectHideFlags: 0
@@ -21928,21 +21676,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: LEG
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -21950,7 +21683,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: legSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 0
 --- !u!1 &6805841848926131089
 GameObject:
   m_ObjectHideFlags: 0
@@ -22337,26 +22071,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: MISC
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: miscSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 0
 --- !u!1 &7009239837230185013
 GameObject:
   m_ObjectHideFlags: 0
@@ -22929,26 +22649,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: MISC
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: miscSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 1
 --- !u!1 &7205399887331665323
 GameObject:
   m_ObjectHideFlags: 0
@@ -23454,21 +23160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TORSO
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -23476,7 +23167,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: torsoSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 4
 --- !u!1 &7380798677188746615
 GameObject:
   m_ObjectHideFlags: 0
@@ -25914,21 +25606,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2275578373942281204}
-        m_TargetAssemblyTypeName: Inventory_EquipChosenItem, Assembly-CSharp
-        m_MethodName: Un_Equip_Item
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HAIR
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
@@ -25941,7 +25618,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: hairSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 5
 --- !u!1 &8777530959308357024
 GameObject:
   m_ObjectHideFlags: 0
@@ -26731,26 +26409,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_BodyDrawing_Items:
   - {fileID: 0}
-  unequipAllItems_TurnOffToggle_Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6582920941255641795, guid: 239b97e1a50f848479f02356b4ff3335, type: 3}
-        m_TargetAssemblyTypeName: Inventory_UnequipAll, Assembly-CSharp
-        m_MethodName: UnequipItemsFromSelectedGroup
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HEAD
-          m_BoolArgument: 0
-        m_CallState: 2
   bodyDrawing_ITEMS:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  itemSpriteTag: headSprite
+  displayGainedItemInInventory: {fileID: 0}
+  toggleIndex: 2
 --- !u!1 &8965416325334495738
 GameObject:
   m_ObjectHideFlags: 0

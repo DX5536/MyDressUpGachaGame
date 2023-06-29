@@ -1,7 +1,8 @@
+using System.Collections;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Inventory_EquipChosenItem: MonoBehaviour
+public class Intentory_UnequipAll_ALT: MonoBehaviour
 {
     [Header("Array in case there are 2 sprites of an object (eg. Hair)")]
     [SerializeField]
@@ -16,16 +17,22 @@ public class Inventory_EquipChosenItem: MonoBehaviour
     [SerializeField]
     private int toggleIndex;
 
+    //[SerializeField]
+    //private string itemSpriteTag;
+
     // Start is called before the first frame update
     void Start()
     {
-        //First deactivate all items
+        //bodyDrawing_ITEMS = GameObject.FindGameObjectsWithTag(itemSpriteTag);
+
+
         DeactivateALLItems();
     }
 
     // Update is called once per frame
     void Update()
     {
+
     }
 
     //This is a workaround as FindGameObectsWithTag cannot find inactive Items
@@ -47,6 +54,7 @@ public class Inventory_EquipChosenItem: MonoBehaviour
     //public to access from OnValueChanged(bool) of the toggle
     public void Un_Equip_Item(bool isItemEquipped)
     {
+        StartCoroutine(SmallDelay());
 
         if (isItemEquipped)
         {
@@ -73,23 +81,21 @@ public class Inventory_EquipChosenItem: MonoBehaviour
         }
     }
 
-    public void TurnToggleOn(bool isItemOn)
-    {
-        var thisToggle = gameObject.GetComponent<Toggle>();
-        if (!isItemOn)
-        {
-            thisToggle.isOn = false;
-        }
-
-        else
-        {
-            thisToggle.isOn = true;
-        }
-    }
-
     private void ToggleIsOn(int caseIndex)
     {
+        //This is the safe proof in case in dex is larger than count 
+        if (caseIndex >= displayGainedItemInInventory.Inv_Slot_NAME_Toggles.Count())
+        {
+            return;
+        }
         displayGainedItemInInventory.Inv_Slot_NAME_Toggles[caseIndex].isOn = true;
     }
 
+
+    //First deactivate all GO of that group before turning a specific on
+    IEnumerator SmallDelay()
+    {
+        DeactivateALLItems();
+        yield return new WaitForSeconds(0.1f);
+    }
 }

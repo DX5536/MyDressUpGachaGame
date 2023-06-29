@@ -34,6 +34,12 @@ public class DisplayGainedItemInInventory: MonoBehaviour
     //private string[] foundType_Names;
     private GameObject[] foundType_GO;
 
+    public Toggle[] Inv_Slot_NAME_Toggles
+    {
+        get => inv_Slot_NAME_Toggles;
+        set => inv_Slot_NAME_Toggles = value;
+    }
+
     //Start didn't work but OnEnable() did -_-
     void OnEnable()
     {
