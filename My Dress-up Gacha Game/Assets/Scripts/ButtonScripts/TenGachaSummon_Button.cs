@@ -341,6 +341,13 @@ public class TenGachaSummon_Button: MonoBehaviour
 
                 SavedDisplayItem(4);
                 break;
+
+            case 5:
+                gainedItem10x_TMP[bannerDisplayItem_Index].text = localItemNames[5];
+                gainedItem10x_IMG[bannerDisplayItem_Index].sprite = localItemImages[5];
+
+                SavedDisplayItem(5);
+                break;
         }
 
         //Debug.Log("Display gainedItem10x_TMP/IMG at index " + bannerDisplayItem_Index);
@@ -403,6 +410,18 @@ public class TenGachaSummon_Button: MonoBehaviour
                 }
                 break;
             case 4:
+                if (!itemsGainedScriptableObject.HasGainedMiscItems[saveGainedItemID])
+                {
+                    itemsGainedScriptableObject.HasGainedMiscItems[saveGainedItemID] = true;
+                }
+                else
+                {
+                    Debug.Log("You have already gained MISC item at index "
+                        + Array.IndexOf(itemsGainedScriptableObject.HasGainedMiscItems, saveGainedItemID));
+                }
+                break;
+
+            case 5:
                 if (!itemsGainedScriptableObject.HasGainedMiscItems[saveGainedItemID])
                 {
                     itemsGainedScriptableObject.HasGainedMiscItems[saveGainedItemID] = true;
