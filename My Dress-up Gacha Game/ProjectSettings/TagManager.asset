@@ -9,6 +9,11 @@ TagManager:
   - torsoItemIMG
   - legItemIMG
   - miscItemIMG
+  - hairSprite
+  - headSprite
+  - torsoSprite
+  - legSprite
+  - miscSprite
   layers:
   - Default
   - TransparentFX

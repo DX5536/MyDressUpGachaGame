@@ -152,6 +152,15 @@ public class TenGachaSummon_Button: MonoBehaviour
                 gainedItem_Index = 3;
             }
 
+            else if (perCent < localItemChances[0]
+                             + localItemChances[1]
+                             + localItemChances[2]
+                             + localItemChances[3]
+                             + localItemChances[4])
+            {
+                gainedItem_Index = 4;
+            }
+
             else
             {
                 Debug.LogError("ERROR! It should not be possible to go below 0% or above 100% -> Check ScriptableObject");

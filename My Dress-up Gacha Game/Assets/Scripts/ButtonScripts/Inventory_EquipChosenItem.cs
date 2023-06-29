@@ -1,5 +1,5 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Inventory_EquipChosenItem: MonoBehaviour
 {
@@ -8,16 +8,18 @@ public class Inventory_EquipChosenItem: MonoBehaviour
     private SpriteRenderer[] selected_BodyDrawing_Items;
 
     [SerializeField]
-    private UnityEvent unequipAllItems_TurnOffToggle_Event;
+    private GameObject[] bodyDrawing_ITEMS;
 
-    [Header("We need this to access the list of SpriteRenderer of bodyDrawing")]
-    [SerializeField]
-    private BodyDrawingSpawnLogic bodyDrawingSpawnLogic;
+    //[SerializeField]
+    //private string itemSpriteTag;
 
     // Start is called before the first frame update
     void Start()
     {
+        //bodyDrawing_ITEMS = GameObject.FindGameObjectsWithTag(itemSpriteTag);
 
+
+        DeactivateALLItems();
     }
 
     // Update is called once per frame
@@ -26,16 +28,28 @@ public class Inventory_EquipChosenItem: MonoBehaviour
 
     }
 
+    //This is a workaround as FindGameObectsWithTag cannot find inactive Items
+    //So first all the items are active (Frankenstein) -> Found and save -> Deactivate them
+    public void DeactivateALLItems()
+    {
+        foreach (var item in bodyDrawing_ITEMS)
+        {
+            item.SetActive(false);
+        }
+
+
+    }
+
     //public to access from OnValueChanged(bool) of the toggle
     public void Un_Equip_Item(bool isItemEquipped)
     {
-        unequipAllItems_TurnOffToggle_Event?.Invoke();
 
         if (isItemEquipped)
         {
-
+            StartCoroutine(SmallDelay());
             foreach (var item in selected_BodyDrawing_Items)
             {
+
                 item.gameObject.SetActive(true);
 
             }
@@ -48,5 +62,13 @@ public class Inventory_EquipChosenItem: MonoBehaviour
                 item.gameObject.SetActive(false);
             }
         }
+    }
+
+
+    //First deactivate all GO of that group before turning a specific on
+    IEnumerator SmallDelay()
+    {
+        DeactivateALLItems();
+        yield return new WaitForSeconds(0.1f);
     }
 }

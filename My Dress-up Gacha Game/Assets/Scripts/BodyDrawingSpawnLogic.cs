@@ -28,12 +28,6 @@ public class BodyDrawingSpawnLogic: MonoBehaviour
     [SerializeField]
     private RectTransform inventory_StartingBodyDrawingPos;
 
-    public SpriteRenderer[] BodyDrawingSpriteRenderers
-    {
-        get => bodyDrawingSpriteRenderers;
-        set => bodyDrawingSpriteRenderers = value;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
