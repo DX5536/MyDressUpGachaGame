@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7357c85f0d27d814f91869c761b91223, type: 3}
+  m_Name: Sound_SO
+  m_EditorClassIdentifier: 
+  backgroundMusic: {fileID: 8300000, guid: d10026b4c62862e4baacce1f22941012, type: 3}
+  confirmedClick_SFX: {fileID: 8300000, guid: c4b0cf5c2169d3349bfdff46c68e49fa, type: 3}
+  backClick_SFX: {fileID: 8300000, guid: 05b466959924d9044af8c497d35f188c, type: 3}
+  gachaClick_SFX: {fileID: 8300000, guid: c17fd4b225a693e41b450f54251b6c86, type: 3}
+  equipItem_SFX: {fileID: 8300000, guid: b8676872dd838b448af7c82c92503052, type: 3}
