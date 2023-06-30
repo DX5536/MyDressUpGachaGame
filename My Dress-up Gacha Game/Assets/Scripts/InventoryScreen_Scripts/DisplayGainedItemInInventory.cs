@@ -49,6 +49,12 @@ public class DisplayGainedItemInInventory: MonoBehaviour
 
     private void Start()
     {
+        //At the start of the game we turn off all gained Item in slots
+        for (int i = 0;i < foundChild.Length;i++)
+        {
+            DisplayGainedItem(false, i);
+        }
+
         FindChildren();
     }
 
@@ -80,13 +86,6 @@ public class DisplayGainedItemInInventory: MonoBehaviour
             }
 
             Find_Inv_SlotOfType_SwitchCase();
-
-            //At the start of the game we turn off all gained Item in slots
-            for (int i = 0;i < foundChild.Length;i++)
-            {
-                DisplayGainedItem(false, i);
-            }
-
         }
     }
 

@@ -64,11 +64,12 @@ public class Inventory_EquipChosenItem: MonoBehaviour
                 item.gameObject.SetActive(true);
             }
         }
+
         else
         {
             foreach (var item in selected_BodyDrawing_Items)
             {
-                displayGainedItemInInventory.Inv_Slot_NAME_Toggles[toggleIndex].isOn = false;
+                //displayGainedItemInInventory.Inv_Slot_NAME_Toggles[toggleIndex].isOn = false;
                 item.gameObject.SetActive(false);
             }
         }
