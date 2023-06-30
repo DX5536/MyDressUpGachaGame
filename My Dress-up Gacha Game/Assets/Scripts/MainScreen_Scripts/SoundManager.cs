@@ -80,7 +80,7 @@ public class SoundManager: MonoBehaviour
     }
 
     //Walking
-    public void PlaybackClickSFX()
+    public void PlayBackClickSFX()
     {
         if (backClickSFX_AudioSource.isPlaying)
         {
@@ -97,6 +97,8 @@ public class SoundManager: MonoBehaviour
     {
         if (gachaClick_AudioSource.isPlaying)
         {
+            gachaClick_AudioSource.Stop();
+            gachaClick_AudioSource.Play();
             return;
         }
         else

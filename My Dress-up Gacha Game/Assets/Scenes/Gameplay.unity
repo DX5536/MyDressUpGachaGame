@@ -443,6 +443,18 @@ MonoBehaviour:
           m_StringArgument: Torso Banner
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2092091680}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayEquipItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &29892061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1208,8 +1220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17, y: -420.3}
-  m_SizeDelta: {x: 430.53, y: 184.49}
+  m_AnchoredPosition: {x: 17, y: -430}
+  m_SizeDelta: {x: 400, y: 155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202903873
 MonoBehaviour:
@@ -1531,6 +1543,18 @@ MonoBehaviour:
           m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: Legs Banner
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2092091680}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayEquipItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &247412220
@@ -2551,6 +2575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windowPanel: {fileID: 981471223}
   DOTweenValuesScriptableObject: {fileID: 11400000, guid: c18050c1512f2954986e18f6b001a380, type: 2}
+  isWindowPanelInventory: 0
   isWindowActive: 0
 --- !u!4 &359262382
 Transform:
@@ -3499,6 +3524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windowPanel: {fileID: 869115500}
   DOTweenValuesScriptableObject: {fileID: 11400000, guid: c18050c1512f2954986e18f6b001a380, type: 2}
+  isWindowPanelInventory: 0
   isWindowActive: 0
 --- !u!1 &472982338 stripped
 GameObject:
@@ -4092,6 +4118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windowPanel: {fileID: 8536160202794682330}
   DOTweenValuesScriptableObject: {fileID: 11400000, guid: c18050c1512f2954986e18f6b001a380, type: 2}
+  isWindowPanelInventory: 0
   isWindowActive: 0
 --- !u!1 &533285208
 GameObject:
@@ -5268,7 +5295,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2092091680}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: PlaybackClickSFX
+        m_MethodName: PlayBackClickSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6112,7 +6139,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2092091680}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: PlayConfirmedClickSFX
+        m_MethodName: PlayGachaClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6450,7 +6477,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2092091680}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: PlaybackClickSFX
+        m_MethodName: PlayBackClickSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7319,7 +7346,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2092091680}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: PlayConfirmedClickSFX
+        m_MethodName: PlayGachaClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7471,7 +7498,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2092091680}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: PlayConfirmedClickSFX
+        m_MethodName: PlayGachaClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8151,7 +8178,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2092091680}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: PlayConfirmedClickSFX
+        m_MethodName: PlayGachaClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8358,6 +8385,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2092091680}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayBackClickSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &822690352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8527,7 +8566,7 @@ RectTransform:
   - {fileID: 202903872}
   - {fileID: 1037385540}
   m_Father: {fileID: 7143830724178165213}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10058,8 +10097,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 18.473}
-  m_SizeDelta: {x: 1398.88, y: 693.05}
+  m_AnchoredPosition: {x: 0, y: 15}
+  m_SizeDelta: {x: 1500, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1037385541
 MonoBehaviour:
@@ -10081,9 +10120,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Programming, Art: Hai Lam Dang\nBGM: RF10-Lounging in Lisbon by legacyAlli
-    is licensed under a Attribution 4.0 International License.\n---\nMain Screen
-    BG: Chireiden in \"Love In Chireiden\" (https://dx5536.itch.io/love-in-chireiden)
+  m_text: "Programming & Art: Hai Lam Dang\n---\nBGM: RF10-Lounging in Lisbon by
+    legacyAlli\n is licensed under a Attribution 4.0 International License.\n---\nSound
+    Effects: \n- GUI Sound Effects by Lokif\n- Attribute Little Robot Sound Factory
+    (www.littlerobotsoundfactory.com)\n- Puzzle Game Sound Effects by T-STUDIO\n---\nMain
+    Screen BG: Chireiden in \"Love In Chireiden\" (https://dx5536.itch.io/love-in-chireiden)
     by DX5536\n---\n<i>Special thanks to:</i>\n- Timur L\xFCdemann & Steffan Kahl
     for helping in bug fixing\n- Jannick Elfers for testing the game and provides
     feedbacks\n- My 1st and 2nd examiners\n---\nSubmission for Game Design Bachelor,
@@ -10114,7 +10155,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.15
+  m_fontSize: 33.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10323,6 +10364,18 @@ MonoBehaviour:
       - m_Target: {fileID: 525756219}
         m_TargetAssemblyTypeName: OpenSpecificWindow, Assembly-CSharp
         m_MethodName: ChangeWindowStatus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2092091680}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayBackClickSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11103,6 +11156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windowPanel: {fileID: 1852659400}
   DOTweenValuesScriptableObject: {fileID: 11400000, guid: c18050c1512f2954986e18f6b001a380, type: 2}
+  isWindowPanelInventory: 0
   isWindowActive: 0
 --- !u!1 &1183450369 stripped
 GameObject:
@@ -12325,6 +12379,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1182837134}
+        m_TargetAssemblyTypeName: OpenSpecificWindow, Assembly-CSharp
+        m_MethodName: ChangeWindowStatus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1114416233}
         m_TargetAssemblyTypeName: MainPanelsTween, Assembly-CSharp
         m_MethodName: ShowTween_InAppPanel
@@ -12894,6 +12960,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Hair Banner
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2092091680}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayEquipItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1349835666
@@ -13864,7 +13942,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2092091680}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: PlayConfirmedClickSFX
+        m_MethodName: PlayGachaClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14539,7 +14617,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -14934,6 +15012,18 @@ MonoBehaviour:
       - m_Target: {fileID: 436322534}
         m_TargetAssemblyTypeName: InAppShop, Assembly-CSharp
         m_MethodName: DisplaySummonTicketAndMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2092091680}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayBackClickSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16352,6 +16442,18 @@ MonoBehaviour:
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: Head Banner
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2092091680}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayEquipItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1771680391
@@ -17788,7 +17890,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2092091680}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: PlayConfirmedClickSFX
+        m_MethodName: PlayGachaClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18287,6 +18389,18 @@ MonoBehaviour:
           m_StringArgument: Misc Banner
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2092091680}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayEquipItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1958511071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18625,6 +18739,18 @@ MonoBehaviour:
       - m_Target: {fileID: 471709040}
         m_TargetAssemblyTypeName: OpenSpecificWindow, Assembly-CSharp
         m_MethodName: ChangeWindowStatus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1114416233}
+        m_TargetAssemblyTypeName: MainPanelsTween, Assembly-CSharp
+        m_MethodName: ShowTween_Credits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20923,7 +21049,7 @@ RectTransform:
   - {fileID: 611998838}
   - {fileID: 1078933783}
   m_Father: {fileID: 7143830724178165213}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -20969,6 +21095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 866155535}
     m_Modifications:
+    - target: {fileID: 60688381308580135, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 97698041274894689, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Color.a
       value: 0.25490198
@@ -21008,6 +21138,10 @@ PrefabInstance:
     - target: {fileID: 170973055497317109, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Color.a
       value: 0.25490198
+      objectReference: {fileID: 0}
+    - target: {fileID: 179500342945204650, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 181251042686287307, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Color.a
@@ -21068,6 +21202,10 @@ PrefabInstance:
     - target: {fileID: 292789717668495731, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 337546438994590500, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 356438795129492620, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Sprite
@@ -21349,6 +21487,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: a374e5d1a1043d94087a2cbfc77a3354, type: 3}
+    - target: {fileID: 778430604430960407, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 821142952171732950, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922919011219366210, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 923266071013402593, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -21376,6 +21526,10 @@ PrefabInstance:
     - target: {fileID: 969778084307340360, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Color.a
       value: 0.25490198
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009702374812250720, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1009793373174594811, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Color.a
@@ -21613,6 +21767,10 @@ PrefabInstance:
       propertyPath: selected_BodyDrawing_Items.Array.data[1]
       value: 
       objectReference: {fileID: 142314275}
+    - target: {fileID: 1270033594228999626, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1333251007342451680, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -21705,6 +21863,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 21af45f475c3e7c40a80523e09600c4b, type: 3}
+    - target: {fileID: 2009489953404995086, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2027857632454322080, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -21853,6 +22015,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.25490198
       objectReference: {fileID: 0}
+    - target: {fileID: 2404777089368840500, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482279297882213853, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2493414788302326861, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -21875,6 +22045,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2493414788302326861, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2567006967254531469, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618630358079852363, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2700067228095743780, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
@@ -22107,6 +22285,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2783369199933840645, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799088813696908533, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2822012994632037416, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
@@ -22357,6 +22539,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3464838118283143673, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3480224977400634582, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -22412,6 +22598,10 @@ PrefabInstance:
     - target: {fileID: 3480224977400634582, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502789615822547015, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3541684811499589186, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: displayGainedItemInInventory
@@ -22681,6 +22871,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4054998852399124134, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4131665297919594640, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -22893,6 +23087,14 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4696672823834114619, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703765635920377653, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4726741284565710498, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Color.a
       value: 0.25490198
@@ -23057,6 +23259,10 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5142549192598037762, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5159804228916421588, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -23185,6 +23391,10 @@ PrefabInstance:
       propertyPath: selected_BodyDrawing_Items.Array.data[0]
       value: 
       objectReference: {fileID: 931913488}
+    - target: {fileID: 5325429924491422351, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5351190777615798724, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: displayGainedItemInInventory
       value: 
@@ -23489,6 +23699,10 @@ PrefabInstance:
       propertyPath: selected_BodyDrawing_Items.Array.data[0]
       value: 
       objectReference: {fileID: 1075731605}
+    - target: {fileID: 5721502827951379055, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5727964924468264140, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Color.a
       value: 0.25490198
@@ -23717,6 +23931,10 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6179473448508084532, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6187953499320637960, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -23736,6 +23954,10 @@ PrefabInstance:
     - target: {fileID: 6331142687789833658, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444905036464768654, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6467492824410823795, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Enabled
@@ -23937,6 +24159,10 @@ PrefabInstance:
       propertyPath: m_Spacing.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 7145220755886547733, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7175253644005406105, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: displayGainedItemInInventory
       value: 
@@ -23989,6 +24215,10 @@ PrefabInstance:
       propertyPath: selected_BodyDrawing_Items.Array.data[0]
       value: 
       objectReference: {fileID: 54650740}
+    - target: {fileID: 7205399887331665323, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7217661089956007146, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -24149,6 +24379,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 651f0963a1facac4697763471b12f6ac, type: 3}
+    - target: {fileID: 7859459619667708549, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7869301315720211497, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -24249,6 +24483,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8169081952868193125, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8310329692631492403, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Color.a
       value: 0.25490198
@@ -24281,6 +24519,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8681242321374887671, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8699892062342849857, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -24289,6 +24531,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6e1fd6f3d62d0f249b2bdd11d108ac75, type: 3}
+    - target: {fileID: 8817200057337092549, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8884027361591479665, guid: e86f8ea3f75df5e4c999fd79f589d50b, type: 3}
       propertyPath: m_Color.a
       value: 0.25490198
@@ -24554,6 +24800,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 525756219}
+        m_TargetAssemblyTypeName: OpenSpecificWindow, Assembly-CSharp
+        m_MethodName: ChangeWindowStatus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1114416233}
         m_TargetAssemblyTypeName: MainPanelsTween, Assembly-CSharp
         m_MethodName: ShowTween_InventoryPanel
@@ -24569,18 +24827,6 @@ MonoBehaviour:
       - m_Target: {fileID: 2092091680}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlayConfirmedClickSFX
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 525756219}
-        m_TargetAssemblyTypeName: OpenSpecificWindow, Assembly-CSharp
-        m_MethodName: ChangeWindowStatus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24662,6 +24908,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1701677089}
+        m_TargetAssemblyTypeName: BodyDrawingSpawnLogic, Assembly-CSharp
+        m_MethodName: RepositionBodyDrawing_Inventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7079577750383805389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24714,8 +24972,8 @@ RectTransform:
   m_Children:
   - {fileID: 394845809}
   - {fileID: 995998072}
-  - {fileID: 869115501}
   - {fileID: 2365908641895588458}
+  - {fileID: 869115501}
   - {fileID: 1852659401}
   - {fileID: 981471226}
   m_Father: {fileID: 0}
@@ -24959,6 +25217,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 359262381}
+        m_TargetAssemblyTypeName: OpenSpecificWindow, Assembly-CSharp
+        m_MethodName: ChangeWindowStatus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1114416233}
         m_TargetAssemblyTypeName: MainPanelsTween, Assembly-CSharp
         m_MethodName: ShowTween_GachaShop
