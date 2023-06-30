@@ -52,7 +52,7 @@ public class TenGachaSummon_Button: MonoBehaviour
     private Sprite[] localItemImages;
 
     private bool skipAnimation;
-    //[SerializeField]
+    [SerializeField]
     private int gainedItem_Index;
     //[SerializeField]
     private int savedBannerIndex;
