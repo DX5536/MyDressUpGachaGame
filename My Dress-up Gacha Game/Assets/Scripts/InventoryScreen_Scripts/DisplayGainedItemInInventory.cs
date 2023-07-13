@@ -60,7 +60,12 @@ public class DisplayGainedItemInInventory: MonoBehaviour
 
     private void FindChildren()
     {
-        foundChild = GameObject.FindGameObjectsWithTag(itemIMG_Tag);
+        Find_Inv_SlotOfType_SwitchCase();
+
+        //THIS DAMN FINDGAMEOBJECTSWITHTAGS FUCK THE ENTIRE SHIT IN BUILD (But not in Editor)!!!!!!!!!!!!
+        //FUQ U, BITCH!!!!
+        //foundChild = GameObject.FindGameObjectsWithTag(itemIMG_Tag);
+
         if (foundChild == null)
         {
             Debug.Log("Can't find any children :(");
@@ -85,14 +90,14 @@ public class DisplayGainedItemInInventory: MonoBehaviour
                 }
             }
 
-            Find_Inv_SlotOfType_SwitchCase();
+
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //UpdateInventory();
     }
 
     private void Find_Inv_SlotOfType_SwitchCase()
