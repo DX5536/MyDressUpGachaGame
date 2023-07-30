@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8885c9fbdba4440bdfbc1b9d374fed, type: 3}
+  m_Name: 00_HairChances_SO
+  m_EditorClassIdentifier: 
+  bannerItemIndex: 0
+  itemNames:
+  - Normal Hair
+  - Hime Cut
+  - Long Curly
+  - Wolfcut
+  - Sweep Back
+  - Short Hair
+  itemChances: 2d000000140000000f0000000a0000000700000003000000
+  itemImages:
+  - {fileID: 21300000, guid: 0d6cc3d44fb744545be222027216ff9d, type: 3}
+  - {fileID: 21300000, guid: 052e0053ad4576f4eaf9b3bbc68b3237, type: 3}
+  - {fileID: 21300000, guid: 651f0963a1facac4697763471b12f6ac, type: 3}
+  - {fileID: 21300000, guid: 21af45f475c3e7c40a80523e09600c4b, type: 3}
+  - {fileID: 21300000, guid: 6341f6769620edc468bd6edeefccd7ff, type: 3}
+  - {fileID: 21300000, guid: e65c9d9361ab3114493a44e0b331e11b, type: 3}

@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - hairItemIMG
+  - headItemIMG
+  - torsoItemIMG
+  - legItemIMG
+  - miscItemIMG
+  - hairSprite
+  - headSprite
+  - torsoSprite
+  - legSprite
+  - miscSprite
   layers:
   - Default
   - TransparentFX
